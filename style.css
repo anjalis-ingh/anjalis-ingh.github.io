@@ -1,8 +1,9 @@
+/* Fixes the side margins */
 body {
   margin: 0px;
 }
 
-
+/* The Navigation Bar Customization */
 .navbar {
     position:fixed;
     top: 0;
@@ -20,7 +21,7 @@ body {
 .navbar ul {
     display:flex;
     list-style:none;
-    width:100%;
+    width: 100%;
     justify-content:center;
 }
 
@@ -30,33 +31,27 @@ body {
 }
 
 .navbar a {
-    /* make them little circles */
+    /* The Dots */
     display: block;
     border-radius: 45%;
-    border: 1px solid white;
-    width: 20px;
-    height: 20px;
+    border: 1px solid #000000;
+    width: 10px;
+    height: 10px;
 
-    /* with some space between them */
+    /* Spacing */
     margin: 20px 0;
 
-    /* hide the text content */
     text-indent: -999px;
     overflow: hidden;
-
-    /* establish positioning conext for the ::after pseudo-elements (below)*/
     position: relative;
   }
 
-  /* the "fill" */
 .navbar a::after {
-    /* won't render without a 'content' rule */
     content:"";
 
-    /* red fill */
-    background-color: #ff0000;
+    /* The Black Dot Fill */
+    background-color: #000000;
 
-    /* zero height until it's active */
     position: absolute;
     bottom: 0;
     height: 0;
@@ -64,17 +59,17 @@ body {
     right: 0;
     width: 100%;
 
-    /* animate the height when it changes */
     transition: height 0.3s ease;
   }
 
-  /* active and hovered elements */
 .navbar a:hover::after,
 .navbar a.active::after {
-  /* change the height to 100%.
-     the transition rule above will cause this to animate */
   height: 100%;
 }
+
+/* End of the Navigation Bar Customization */
+
+/* The Slideshow Slider Customization */
 
 .slideshow-slider {
   height: 100vh;
@@ -86,13 +81,42 @@ body {
   scroll-behavior: smooth;
 }
 
+/* The Background Image Customization */
+.slide {
+  background-size: cover;
+  position: relative;
+  height: 100vh;
+  opacity: 0.8;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+
+/* The Center Image Customization */
+.mini-slide {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  width: 180px;
+  height: 180px;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+
+  display: block;
+  margin: auto;
+
+}
+
 .slides {
   display: flex;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
-
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
+ -webkit-overflow-scrolling: touch;
 }
 
 .slides > div {
@@ -121,8 +145,12 @@ body {
 
 }
 
-
 .slide > div:target {
+  transform: scale(0.8);
+}
+
+
+.mini-slide > div:target {
   transform: scale(0.8);
 }
 
@@ -139,34 +167,79 @@ body {
   }
 }
 
-#rain-gif {
-    background-image: url('https://i.pinimg.com/originals/18/1e/21/181e2120bb85fcd99f6f69bb3e652568.gif');
-    background-size: cover;
+/* End of the Slideshow Slider Customization */
 
-    height: 100vh;
-    opacity: 0.8;
-    background-position: center;
-    background-repeat: no-repeat;
+/* The Center Image Links */
+#rain-img {
+  background-image: url('https://i.pinimg.com/originals/18/1e/21/181e2120bb85fcd99f6f69bb3e652568.gif');
+
+}
+
+#driving-img {
+    background-image: url('https://c.tenor.com/52-erqoYMgsAAAAC/anime-nature.gif');
+
+}
+
+#park-img {
+    background-image: url('https://im3.ezgif.com/tmp/ezgif-3-dc7dc1dcf8.gif');
+
+}
+
+#boat-img {
+    background-image: url('https://i.pinimg.com/originals/99/bd/89/99bd897850cf198504a2d405ea06b780.gif');
+
+}
+
+#library-img {
+    background-image: url('https://64.media.tumblr.com/924005b81bc6892626105ad44253a3d9/tumblr_ouxyvtWzwR1wyppevo1_1280.gifv');
+
+}
+
+#home-img {
+    background-image: url('https://64.media.tumblr.com/45dd28f7c73f6a5234f0fe5b489f5af4/7f0ee53c41d5b2b8-7c/s640x960/f8ba0117a7dc5d88d04933fc678340919250cb09.gifv');
+
+}
+
+#bus-img {
+    background-image: url('https://im3.ezgif.com/tmp/ezgif-3-76690c8819.gif');
+
+}
+
+
+
+
+/* The Background Image Links */
+#rain-gif {
+    background-image: url('rain.gif');
 
 }
 
 #driving-gif {
-    background-image: url('https://c.tenor.com/52-erqoYMgsAAAAC/anime-nature.gif');
-    background-size: cover;
-
-    height: 100vh;
-    opacity: 0.8;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url('driving.gif');
 
 }
 
 #park-gif {
-    background-image: url('https://c.tenor.com/dlQ5-L4aNscAAAAd/kikis-delivery-service-anime.gif');
-    background-size: cover;
+    background-image: url('park.gif');
 
-    height: 100vh;
-    opacity: 0.8;
-    background-position: center;
-    background-repeat: no-repeat;
+}
+
+#boat-gif {
+    background-image: url('boat.gif');
+
+}
+
+#library-gif {
+    background-image: url('library.gif');
+
+}
+
+#home-gif {
+    background-image: url('home.gif');
+
+}
+
+#bus-gif {
+    background-image: url('bus.gif');
+
 }
