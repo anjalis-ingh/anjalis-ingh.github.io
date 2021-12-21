@@ -1,10 +1,172 @@
-body{
-    background-image: url('https://c.tenor.com/zd_1JsHtzr0AAAAC/aesthetic-anime.gif');
+body {
+  margin: 0px;
+}
+
+
+.navbar {
+    position:fixed;
+    top: 0;
+    z-index:1;
+    display:flex;
+    width:100%;
+    height:40px;
+    opacity: 1.0;
+
+    right:32px;
+    top:90%;
+    transform: translateY(-10%);
+}
+
+.navbar ul {
+    display:flex;
+    list-style:none;
+    width:100%;
+    justify-content:center;
+}
+
+.navbar ul li{
+    margin:0 1rem;
+    padding:1rem;
+}
+
+.navbar a {
+    /* make them little circles */
+    display: block;
+    border-radius: 45%;
+    border: 1px solid white;
+    width: 20px;
+    height: 20px;
+
+    /* with some space between them */
+    margin: 20px 0;
+
+    /* hide the text content */
+    text-indent: -999px;
+    overflow: hidden;
+
+    /* establish positioning conext for the ::after pseudo-elements (below)*/
+    position: relative;
+  }
+
+  /* the "fill" */
+.navbar a::after {
+    /* won't render without a 'content' rule */
+    content:"";
+
+    /* red fill */
+    background-color: #ff0000;
+
+    /* zero height until it's active */
+    position: absolute;
+    bottom: 0;
+    height: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+
+    /* animate the height when it changes */
+    transition: height 0.3s ease;
+  }
+
+  /* active and hovered elements */
+.navbar a:hover::after,
+.navbar a.active::after {
+  /* change the height to 100%.
+     the transition rule above will cause this to animate */
+  height: 100%;
+}
+
+.slideshow-slider {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+
+  overflow-y:scroll;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.slides {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.slides > div {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  height: 100vh;
+  width: 100%;
+
+  transform-origin: center center;
+  transform: scale(1);
+  transition: transform 0.5s;
+  position: relative;
+
+  display: flex;
+}
+
+.slider > a {
+  display: inline-flex;
+  width: 1.5rem;
+  height: 1.5rem;
+  background: white;
+  text-decoration: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+
+}
+
+
+.slide > div:target {
+  transform: scale(0.8);
+}
+
+.slideshow-slider > a:active {
+  top: 1px;
+}
+.slideshow-slider > a:focus {
+  background: #000;
+}
+
+@supports (scroll-snap-type) {
+  .slideshow-slider > a {
+    display: none;
+  }
+}
+
+#rain-gif {
+    background-image: url('https://i.pinimg.com/originals/18/1e/21/181e2120bb85fcd99f6f69bb3e652568.gif');
     background-size: cover;
 
+    height: 100vh;
+    opacity: 0.8;
+    background-position: center;
+    background-repeat: no-repeat;
 
+}
+
+#driving-gif {
+    background-image: url('https://c.tenor.com/52-erqoYMgsAAAAC/anime-nature.gif');
+    background-size: cover;
 
     height: 100vh;
-    padding:0;
-    margin:0;
+    opacity: 0.8;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+#park-gif {
+    background-image: url('https://c.tenor.com/dlQ5-L4aNscAAAAd/kikis-delivery-service-anime.gif');
+    background-size: cover;
+
+    height: 100vh;
+    opacity: 0.8;
+    background-position: center;
+    background-repeat: no-repeat;
 }
