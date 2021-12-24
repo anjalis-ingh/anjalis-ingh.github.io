@@ -1,6 +1,6 @@
 /* Fixes the side margins */
 body {
-  margin: 0px;
+  margin: 0px
 }
 
 /* The Navigation Bar Customization */
@@ -19,14 +19,14 @@ body {
 }
 
 .navbar ul {
-    display:flex;
+    display: flex;
     list-style:none;
     width: 100%;
     justify-content:center;
 }
 
 .navbar ul li{
-    margin:0 1rem;
+    margin: 0 0.8rem;
     padding:1rem;
 }
 
@@ -34,9 +34,9 @@ body {
     /* The Dots */
     display: block;
     border-radius: 45%;
-    border: 1px solid #000000;
-    width: 10px;
-    height: 10px;
+    border: 1px solid #2e2e2e;
+    width: 8px;
+    height: 8px;
 
     /* Spacing */
     margin: 20px 0;
@@ -50,7 +50,7 @@ body {
     content:"";
 
     /* The Black Dot Fill */
-    background-color: #000000;
+    background-color: #4f4f4f;
 
     position: absolute;
     bottom: 0;
@@ -69,20 +69,27 @@ body {
 
 /* End of the Navigation Bar Customization */
 
-/* The Slideshow Slider Customization */
+/* The Sound Icon */
 
+.loader{
+  height: 100px;
+  width: 15%;
+  text-align: left;
+  padding: 1em;
+  line-height: 330px;
+}
+
+
+/* The Caption Text */
 p {
 
   font-weight: bold;
   font-style: italic;
-
-  line-height: 350px;
-  margin: auto;
-  border: 3px solid transperent;
-  padding: 20px;
+  line-height: 310px;
+  align-self: bottom;
 }
 
-
+/* The Slideshow Slider Customization */
 
 .slideshow-slider {
   height: 100vh;
@@ -106,15 +113,14 @@ p {
 
 }
 
-
 /* The Center Image Customization */
 .mini-slide {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
 
   position: absolute;
   left: 0;
@@ -124,7 +130,6 @@ p {
 
   display: flex;
   margin: auto;
-
 }
 
 .slides {
@@ -157,7 +162,6 @@ p {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-
 }
 
 .slide > div:target {
@@ -172,6 +176,7 @@ p {
 .slideshow-slider > a:active {
   top: 1px;
 }
+
 .slideshow-slider > a:focus {
   background: #000;
 }
@@ -184,81 +189,149 @@ p {
 
 /* End of the Slideshow Slider Customization */
 
-
-
-
-
 /* The Center Image Links */
-#rain-img {
-  background-image: url('https://i.pinimg.com/originals/18/1e/21/181e2120bb85fcd99f6f69bb3e652568.gif');
-
-}
-
-#driving-img {
-    background-image: url('https://c.tenor.com/52-erqoYMgsAAAAC/anime-nature.gif');
-
+#nature-img {
+  background-image: url('https://i.pinimg.com/originals/92/2b/f1/922bf1ac2c80f8c2164c754f10e3c01d.gif');
 }
 
 #park-img {
-    background-image: url('park1.gif');
-
+    background-image: url('/mini img/park1.gif');
 }
 
-#boat-img {
-    background-image: url('https://i.pinimg.com/originals/99/bd/89/99bd897850cf198504a2d405ea06b780.gif');
-
+#cafe-img {
+    background-image: url('https://c.tenor.com/lC0kjOv7jMYAAAAC/anime-coffee.gif');
 }
 
 #library-img {
     background-image: url('https://64.media.tumblr.com/924005b81bc6892626105ad44253a3d9/tumblr_ouxyvtWzwR1wyppevo1_1280.gifv');
-
 }
 
 #home-img {
     background-image: url('https://64.media.tumblr.com/45dd28f7c73f6a5234f0fe5b489f5af4/7f0ee53c41d5b2b8-7c/s640x960/f8ba0117a7dc5d88d04933fc678340919250cb09.gifv');
-
 }
 
 #bus-img {
-    background-image: url('bus1.gif');
-
+    background-image: url('/mini img/bus1.gif');
 }
-
-
 
 
 /* The Background Image Links */
-#rain-gif {
-    background-image: url('rain.gif');
-
-}
-
-#driving-gif {
-    background-image: url('driving.gif');
-
+#nature-gif {
+    background-image: url('/background gifs/nature.gif');
 }
 
 #park-gif {
-    background-image: url('park.gif');
-
+    background-image: url('/background gifs/park.gif');
 }
 
-#boat-gif {
-    background-image: url('boat.gif');
-
+#cafe-gif {
+    background-image: url('/background gifs/cafe.gif');
 }
 
 #library-gif {
-    background-image: url('library.gif');
-
+    background-image: url('/background gifs/library.gif');
 }
 
 #home-gif {
-    background-image: url('home.gif');
-
+    background-image: url('/background gifs/home.gif');
 }
 
 #bus-gif {
-    background-image: url('bus.gif');
-
+    background-image: url('/background gifs/bus.gif');
 }
+
+/* The Volume Sliders */
+#player {
+  width: 350px;
+  height: 50px;
+  position: relative;
+  margin: 0 auto;
+  top: 40px;
+}
+
+#volume {
+  position: absolute;
+  left: -500px;
+  margin: 0 auto;
+  height: 2px;
+  width: 100px;
+  background: #555;
+  border-radius: 15px;
+}
+
+#volume1 {
+  position: absolute;
+  left: -360px;
+  margin: 0 auto;
+  height: 2px;
+  width: 100px;
+  background: #555;
+  border-radius: 15px;
+}
+
+#volume2 {
+  position: absolute;
+  left: -220px;
+  margin: 0 auto;
+  height: 2px;
+  width: 100px;
+  background: #555;
+  border-radius: 15px;
+}
+
+#volume3 {
+  position: absolute;
+  left: -80px;
+  margin: 0 auto;
+  height: 2px;
+  width: 100px;
+  background: #555;
+  border-radius: 15px;
+}
+
+#volume4 {
+  position: absolute;
+  left: 60px;
+  margin: 0 auto;
+  height: 2px;
+  width: 100px;
+  background: #555;
+  border-radius: 15px;
+}
+
+#volume5 {
+  position: absolute;
+  left: 200px;
+  margin: 0 auto;
+  height: 2px;
+  width: 100px;
+  background: #555;
+  border-radius: 15px;
+}
+
+.ui-slider-range-min {
+  height: 5px;
+  width: 300px;
+  position: absolute;
+  background: #2ecc71;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+.ui-slider-handle {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  position: absolute;
+  margin-left: -8px;
+  margin-top: -4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.ui-widget.ui-widget-content {
+    border: none;
+}
+
+/* End of the Volume Slider */

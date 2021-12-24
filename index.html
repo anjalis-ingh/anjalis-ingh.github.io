@@ -4,74 +4,497 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
   <title>VirtualComfort</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script type="text/javascript" src="http://127.0.0.1:3000/jquery-ui.min.js"></script>
   <script src="scripts.js"></script>
+  <link rel="stylesheet" href="http://127.0.0.1:3000/jquery-ui.min.css">
+  <link rel="stylesheet" href="style.css">
+
+
+
+
+
+
 </head>
 <body>
+
   <!-- The Navigation Bar -->
   <div class="slideshow-slider">
     <nav class="navbar">
      <ul>
-      <li><a href="#rain-gif">1</a></li>
-      <li><a href="#driving-gif">2</a></li>
-      <li><a href="#park-gif">3</a></li>
-      <li><a href="#boat-gif">4</a></li>
-      <li><a href="#library-gif">5</a></li>
-      <li><a href="#home-gif">6</a></li>
-      <li><a href="#bus-gif">7</a></li>
+      <li><a href="#nature-gif">1</a></li>
+      <li><a href="#park-gif">2</a></li>
+      <li><a href="#cafe-gif">3</a></li>
+      <li><a href="#library-gif">4</a></li>
+      <li><a href="#home-gif">5</a></li>
+      <li><a href="#bus-gif">6</a></li>
     </ul>
   </nav>
   <!-- End of Navigation Bar -->
 
   <!-- The Slides -->
     <div class="slides">
+        <!-- Slide #1 -->
         <!-- The Background Image -->
-        <div class="slide" id="rain-gif">
+        <div class="slide" id="nature-gif">
+
+          <!-- The Volume Sliders -->
+          <div id="player">
+            <div id="volume"></div>
+            <div id="volume1"></div>
+            <div id="volume2"></div>
+            <div id="volume3"></div>
+            <div id="volume4"></div>
+            <div id="volume5"></div>
+          </div>
+
           <!-- The Center Image -->
-           <div class="mini-slide" id="rain-img">
+           <div class="mini-slide" id="nature-img">
+
+          <!-- The Left Icon -->
+             <div class="loader loader--style6">
+               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                 <rect x="0" y="13" width="4" height="5" fill="#2D4030">
+                   <animate attributeName="height" attributeType="XML"
+                     values="5;21;5"
+                     begin="0s" dur="0.6s" repeatCount="indefinite" />
+                   <animate attributeName="y" attributeType="XML"
+                     values="13; 5; 13"
+                     begin="0s" dur="0.6s" repeatCount="indefinite" />
+                 </rect>
+                 <rect x="10" y="13" width="4" height="5" fill="#2D4030">
+                   <animate attributeName="height" attributeType="XML"
+                     values="5;21;5"
+                     begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                   <animate attributeName="y" attributeType="XML"
+                     values="13; 5; 13"
+                     begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                 </rect>
+                 <rect x="20" y="13" width="4" height="5" fill="#2D4030">
+                   <animate attributeName="height" attributeType="XML"
+                     values="5;21;5"
+                     begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                   <animate attributeName="y" attributeType="XML"
+                     values="13; 5; 13"
+                     begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                 </rect>
+               </svg>
+              </div>
+
+              <!-- The Caption -->
               <p> Nature </p>
+
+              <!-- The Right Icon -->
+              <div class="loader loader--style6">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <rect x="0" y="13" width="4" height="5" fill="#2D4030">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="10" y="13" width="4" height="5" fill="#2D4030">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="20" y="13" width="4" height="5" fill="#2D4030">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                </svg>
+              </div>
+
           </div>
         </div>
 
-        <div class="slide" id="driving-gif">
-          <div class="mini-slide" id="driving-img">
-            <p> Drive </p>
-          </div>
-        </div>
 
+        <!-- Slide #2 -->
+        <!-- The Background Image -->
         <div class="slide" id="park-gif">
+          <!-- The Center Image -->
           <div class="mini-slide" id="park-img">
+
+            <!-- The Left Icon -->
+               <div class="loader loader--style6">
+                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                   <rect x="0" y="13" width="4" height="5" fill="#AC6973">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="10" y="13" width="4" height="5" fill="#AC6973">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="20" y="13" width="4" height="5" fill="#AC6973">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                 </svg>
+                </div>
+
+              <!-- The Caption -->
               <p> Park </p>
+
+              <!-- The Right Icon -->
+              <div class="loader loader--style6">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <rect x="0" y="13" width="4" height="5" fill="#AC6973">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="10" y="13" width="4" height="5" fill="#AC6973">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="20" y="13" width="4" height="5" fill="#AC6973">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                </svg>
+              </div>
+
           </div>
         </div>
 
-        <div class="slide" id="boat-gif">
-          <div class="mini-slide" id="boat-img">
-              <p> Town </p>
+        <!-- Slide #3 -->
+        <!-- The Background Image -->
+        <div class="slide" id="cafe-gif">
+          <!-- The Center Image -->
+          <div class="mini-slide" id="cafe-img">
+
+            <!-- The Left Icon -->
+               <div class="loader loader--style6">
+                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                   <rect x="0" y="13" width="4" height="5" fill="#66422D">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="10" y="13" width="4" height="5" fill="#66422D">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="20" y="13" width="4" height="5" fill="#66422D">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                 </svg>
+                </div>
+
+              <!-- The Caption -->
+              <p> Cafe </p>
+
+              <!-- The Right Icon -->
+              <div class="loader loader--style6">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <rect x="0" y="13" width="4" height="5" fill="#66422D">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="10" y="13" width="4" height="5" fill="#66422D">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="20" y="13" width="4" height="5" fill="#66422D">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                </svg>
+              </div>
+
           </div>
         </div>
 
+        <!-- Slide #4 -->
+        <!-- The Background Image -->
         <div class="slide" id="library-gif">
+          <!-- The Center Image -->
           <div class="mini-slide" id="library-img">
+
+            <!-- The Left Icon -->
+               <div class="loader loader--style6">
+                 <svg version="1.1" id="color1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                   <rect x="0" y="13" width="4" height="5" fill="#A4485C">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="10" y="13" width="4" height="5" fill="#A4485C">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="20" y="13" width="4" height="5" fill="#A4485C">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                 </svg>
+                </div>
+
+              <!-- The Caption -->
               <p> Library </p>
+
+              <!-- The Right Icon -->
+              <div class="loader loader--style6">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <rect x="0" y="13" width="4" height="5" fill="#A4485C">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="10" y="13" width="4" height="5" fill="#A4485C">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="20" y="13" width="4" height="5" fill="#A4485C">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                </svg>
+              </div>
+
           </div>
         </div>
 
+        <!-- Slide #5 -->
+        <!-- The Background Image -->
         <div class="slide" id="home-gif">
+          <!-- The Center Image -->
           <div class="mini-slide" id="home-img">
+
+            <!-- The Left Icon -->
+               <div class="loader loader--style6">
+                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                   <rect x="0" y="13" width="4" height="5" fill="#95B4A9">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="10" y="13" width="4" height="5" fill="#95B4A9">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="20" y="13" width="4" height="5" fill="#95B4A9">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                 </svg>
+                </div>
+
+              <!-- The Caption -->
               <p> Home </p>
+
+              <!-- The Right Icon -->
+              <div class="loader loader--style6">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <rect x="0" y="13" width="4" height="5" fill="#95B4A9">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="10" y="13" width="4" height="5" fill="#95B4A9">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="20" y="13" width="4" height="5" fill="#95B4A9">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                </svg>
+              </div>
+
           </div>
         </div>
 
+        <!-- Slide #6 -->
+        <!-- The Background Image -->
         <div class="slide" id="bus-gif">
+          <!-- The Center Image -->
           <div class="mini-slide" id="bus-img">
+
+            <!-- The Left Icon -->
+               <div class="loader loader--style6">
+                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                   <rect x="0" y="13" width="4" height="5" fill="#5C764D">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="10" y="13" width="4" height="5" fill="#5C764D">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="20" y="13" width="4" height="5" fill="#5C764D">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                 </svg>
+                </div>
+
+              <!-- The Caption -->
               <p> Bus </p>
+
+              <!-- The Right Icon -->
+              <div class="loader loader--style6">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <rect x="0" y="13" width="4" height="5" fill="#5C764D">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="10" y="13" width="4" height="5" fill="#5C764D">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="20" y="13" width="4" height="5" fill="#5C764D">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                </svg>
+              </div>
+
           </div>
         </div>
 
     </div>
   </div>
+<!-- End of the Slides -->
 
 </body>
 </html>
