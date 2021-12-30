@@ -7,15 +7,13 @@
 
   <title>VirtualComfort</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
   <script type="text/javascript" src="http://127.0.0.1:3000/jquery-ui.min.js"></script>
   <script src="scripts.js"></script>
+
+  <link rel="stylesheet" href="all.min.css">
   <link rel="stylesheet" href="http://127.0.0.1:3000/jquery-ui.min.css">
   <link rel="stylesheet" href="style.css">
-
-
-
-
-
 
 </head>
 <body>
@@ -37,18 +35,69 @@
   <!-- The Slides -->
     <div class="slides">
         <!-- Slide #1 -->
+
         <!-- The Background Image -->
         <div class="slide" id="nature-gif">
+          <!-- The Menu -->
+          <nav role="navigation">
+            <div id="menuToggle">
+              <input type="checkbox" />
 
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
           <!-- The Volume Sliders -->
-          <div id="player">
-            <div id="volume"></div>
-            <div id="volume1"></div>
-            <div id="volume2"></div>
-            <div id="volume3"></div>
-            <div id="volume4"></div>
-            <div id="volume5"></div>
-          </div>
+                <div id="player">
+            <!-- Block 1 -->
+                  <li><div class="sound">
+                      <i class="icon-style fas fa-cloud-rain fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                      <div id="volume">
+                      </div>
+                    </div></li>
+
+                    <!-- Block 2 -->
+                    <li><div class="sound">
+                        <i class="icon-style1 fas fa-dove fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <div id="volume1">
+                        </div>
+                      </div></li>
+
+                    <!-- Block 3 -->
+                    <li><div class="sound">
+                        <i class="icon-style2 fas fa-fire-alt fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <div id="volume2">
+                        </div>
+                      </div></li>
+
+                    <!-- Block 4 -->
+                    <li><div class="sound">
+                        <i class="icon-style3 fas fa-bug fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <div id="volume3">
+                        </div>
+                      </div></li>
+
+                     <!-- Block 5 -->
+                      <li><div class="sound">
+                          <i class="icon-style4 fas fa-water fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                          <div id="volume4">
+                          </div>
+                        </div></li>
+
+                      <!-- Block 6 -->
+                      <li><div class="sound">
+                          <i class="icon-style5 fas fa-wind fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                          <div id="volume5">
+                          </div>
+                        </div></li>
+
+                    </div>
+          <!-- End of the Volume Sliders -->
+                  </ul>
+                </div>
+              </nav>
+          <!-- End of the Menu -->
 
           <!-- The Center Image -->
            <div class="mini-slide" id="nature-img">
@@ -125,6 +174,17 @@
         <!-- Slide #2 -->
         <!-- The Background Image -->
         <div class="slide" id="park-gif">
+
+          <!-- The Volume Sliders -->
+          <div id="player">
+            <div id="volume"></div>
+            <div id="volume1"></div>
+            <div id="volume2"></div>
+            <div id="volume3"></div>
+            <div id="volume4"></div>
+            <div id="volume5"></div>
+          </div>
+
           <!-- The Center Image -->
           <div class="mini-slide" id="park-img">
 
@@ -199,6 +259,17 @@
         <!-- Slide #3 -->
         <!-- The Background Image -->
         <div class="slide" id="cafe-gif">
+
+          <!-- The Volume Sliders -->
+          <div id="player">
+            <div id="volume"></div>
+            <div id="volume1"></div>
+            <div id="volume2"></div>
+            <div id="volume3"></div>
+            <div id="volume4"></div>
+            <div id="volume5"></div>
+          </div>
+
           <!-- The Center Image -->
           <div class="mini-slide" id="cafe-img">
 
@@ -273,6 +344,17 @@
         <!-- Slide #4 -->
         <!-- The Background Image -->
         <div class="slide" id="library-gif">
+
+          <!-- The Volume Sliders -->
+          <div id="player">
+            <div id="volume"></div>
+            <div id="volume1"></div>
+            <div id="volume2"></div>
+            <div id="volume3"></div>
+            <div id="volume4"></div>
+            <div id="volume5"></div>
+          </div>
+
           <!-- The Center Image -->
           <div class="mini-slide" id="library-img">
 
@@ -347,6 +429,17 @@
         <!-- Slide #5 -->
         <!-- The Background Image -->
         <div class="slide" id="home-gif">
+
+          <!-- The Volume Sliders -->
+          <div id="player">
+            <div id="volume"></div>
+            <div id="volume1"></div>
+            <div id="volume2"></div>
+            <div id="volume3"></div>
+            <div id="volume4"></div>
+            <div id="volume5"></div>
+          </div>
+
           <!-- The Center Image -->
           <div class="mini-slide" id="home-img">
 
@@ -421,6 +514,17 @@
         <!-- Slide #6 -->
         <!-- The Background Image -->
         <div class="slide" id="bus-gif">
+
+          <!-- The Volume Sliders -->
+          <div id="player">
+            <div id="volume"></div>
+            <div id="volume1"></div>
+            <div id="volume2"></div>
+            <div id="volume3"></div>
+            <div id="volume4"></div>
+            <div id="volume5"></div>
+          </div>
+
           <!-- The Center Image -->
           <div class="mini-slide" id="bus-img">
 
@@ -456,7 +560,7 @@
                 </div>
 
               <!-- The Caption -->
-              <p> Bus </p>
+              <p>Bus</p>
 
               <!-- The Right Icon -->
               <div class="loader loader--style6">

@@ -4,7 +4,7 @@ $(function() {
 
   function setVolume(myVolume) {
     if (audioElement != undefined) {
-      audioElement.volume = myVolume;
+      audioElement.volume = 0.5;
     }
   }
 
