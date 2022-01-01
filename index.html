@@ -6,10 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <title>VirtualComfort</title>
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
   <script type="text/javascript" src="http://127.0.0.1:3000/jquery-ui.min.js"></script>
-  <script src="scripts.js"></script>
+  <script type="text/javascript" src="scripts.js"></script>
 
   <link rel="stylesheet" href="all.min.css">
   <link rel="stylesheet" href="http://127.0.0.1:3000/jquery-ui.min.css">
@@ -38,6 +39,7 @@
 
         <!-- The Background Image -->
         <div class="slide" id="nature-gif">
+
           <!-- The Menu -->
           <nav role="navigation">
             <div id="menuToggle">
@@ -48,6 +50,7 @@
               <span></span>
 
               <ul id="menu">
+
           <!-- The Volume Sliders -->
                 <div id="player">
             <!-- Block 1 -->
@@ -98,6 +101,33 @@
                 </div>
               </nav>
           <!-- End of the Menu -->
+
+          <!-- The Right Menu/Task List -->
+          <nav>
+            <div class="container">
+              <ul class="navbar-right">
+                <li><a href="#" id="list"><i class="fa fa-list fa-2x"></i></a></li>
+              </ul>
+            </div>
+          </nav>
+
+          <div class="container">
+            <div class="notepad">
+
+              <div class="wrap">
+            <form class="add-new-task" autocomplete="off">
+              <input type="text" name="new-task" placeholder="Add a new task.." />
+            </form>
+            <div class="task-list">
+              <ul>
+                <li>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+            </div>
+          </div>
 
           <!-- The Center Image -->
            <div class="mini-slide" id="nature-img">

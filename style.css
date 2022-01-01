@@ -72,9 +72,11 @@ body {
 /* The Sound Icon */
 .loader{
   height: 100px;
-  width: 15%;
+  width: 35%;
   padding: 1em;
   line-height: 330px;
+  position: relative;
+  right: 5px;
 }
 
 
@@ -83,6 +85,8 @@ p {
   font-weight: bold;
   font-style: italic;
   line-height: 310px;
+  position: relative;
+  right: 3px;
 }
 
 /* The Slideshow Slider Customization */
@@ -280,36 +284,37 @@ p {
 }
 
 .icon-style {
-  margin-left: -440px;
+  margin-left: -410px;
   margin-top: -25px;
 }
 
 .icon-style1 {
-  margin-left: -440px;
+  margin-left: -410px;
   margin-top: 30px;
 }
 
 .icon-style2 {
-  margin-left: -440px;
+  margin-left: -410px;
   margin-top: 85px;
 }
 .icon-style3 {
-  margin-left: -440px;
+  margin-left: -410px;
   margin-top: 140px;
 }
 
 .icon-style4 {
-  margin-left: -440px;
+  margin-left: -410px;
   margin-top: 195px;
 }
 
 .icon-style5 {
-  margin-left: -440px;
+  margin-left: -410px;
   margin-top: 250px;
 }
 
 /* The Volume Sliders */
 #player {
+  /* moves all the sliders left and right */
   width: 0px;
   height: 50px;
   position: relative;
@@ -320,7 +325,7 @@ p {
 
 #volume {
   position: absolute;
-  left: -450px;
+  left: -430px;
   margin: 0 auto;
   height: 1.5px;
   /* length of the slider */
@@ -332,7 +337,7 @@ p {
 
 #volume1 {
   position: absolute;
-  left: -450px;
+  left: -430px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
@@ -343,7 +348,7 @@ p {
 
 #volume2 {
   position: absolute;
-  left: -450px;
+  left: -430px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
@@ -354,7 +359,7 @@ p {
 
 #volume3 {
   position: absolute;
-  left: -450px;
+  left: -430px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
@@ -365,7 +370,7 @@ p {
 
 #volume4 {
   position: absolute;
-  left: -450px;
+  left: -430px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
@@ -376,7 +381,7 @@ p {
 
 #volume5 {
   position: absolute;
-  left: -450px;
+  left: -430px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
@@ -387,7 +392,7 @@ p {
 
 /* End of the Volume Sliders */
 
-/* menu */
+/* The Left Menu */
 
 #menuToggle
 {
@@ -499,3 +504,148 @@ p {
 {
   transform: none;
 }
+
+/* End of The Left Menu */
+
+/* The Right Menu */
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+
+.navbar-right {
+  float: right;
+}
+li {
+  display: inline;
+  padding-right: -20px;
+}
+a {
+  /* color of the icon */
+  color: LightGray;
+}
+
+#list {
+  position: relative;
+  top: 5px;
+  /* moves icon left and right*/
+  left: 1050px;
+}
+
+.container {
+  /* moves the everything left to right */
+  width: 60%;
+}
+
+.notepad {
+  /* brings the box up and down */
+  margin: 70px 0;
+  float: right;
+  background: #f1f1f1;
+  /* changes the width of the box */
+  width: 400px;
+  position: relative;
+  border-radius: 3px;
+  /* changes the height of the box */
+  padding: 20px;
+  left: 190px;
+}
+
+.notepad:after {
+  bottom: 100%;
+  left: 89%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-bottom-color: white;
+  border-width: 8px;
+  margin-left: -8px;
+}
+
+/* End of the Right Menu */
+
+/* The Task List */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+.wrap {
+  /* width of the both boxes */
+  width: 350px;
+  margin: 0 auto;
+  font: normal 14px "Open Sans", Arial, sans-serif;
+  color: #999;
+}
+
+.task-list {
+  /* width of task list box */
+  width: 98%;
+  min-height: 300px;
+  background: #fff;
+  box-shadow: 2px 2px 0px #ddd;
+  /* distance btwn task bar and list */
+  margin-top: -40px;
+  padding: 22px 6%;
+  position: relative;
+  left: 5px;
+}
+
+.task-list li {
+  /* size of words */
+  font-size: 1.2em;
+  padding: 8px 0;
+  overflow: hidden;
+}
+
+.task-list li span {
+  width: 86%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  float: left;
+}
+
+.task-list li .delete-button {
+  position: relative;
+  top: -6px;
+  height: auto;
+  padding-top: 7px;
+  float: right;
+  vertical-align: top;
+  opacity: 0.5;
+  font-size: 12px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.task-list li .delete-button:hover {
+  opacity: 0.85;
+}
+
+.add-new-task {
+  /* brings both boxes up and down */
+  margin-top: 5px;
+  padding-bottom: 60px;
+  position: relative;
+  /* moves add task box left and right */
+  left: 5px;
+  width: 345px;
+}
+
+.add-new-task input[type="text"] {
+  width: 100%;
+  font: normal 1.2em "Open Sans", Arial, sans-serif;
+  color: #999;
+  box-shadow: 2px 2px 0px #ddd;
+  border: none;
+  border-radius: none;
+  display: block;
+  padding: 12px 6%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* End of the Task List */
