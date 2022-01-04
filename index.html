@@ -6,14 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
   <title>VirtualComfort</title>
+  <link rel="icon" type="image/x-icon" href="favicon.jpeg">
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
-  <script type="text/javascript" src="http://127.0.0.1:3000/jquery-ui.min.js"></script>
-  <script type="text/javascript" src="scripts.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  <script src="scripts.js"></script>
 
-  <link rel="stylesheet" href="all.min.css">
-  <link rel="stylesheet" href="http://127.0.0.1:3000/jquery-ui.min.css">
   <link rel="stylesheet" href="style.css">
 
 </head>
@@ -31,19 +30,18 @@
       <li><a href="#bus-gif">6</a></li>
     </ul>
   </nav>
-  <!-- End of Navigation Bar -->
 
   <!-- The Slides -->
     <div class="slides">
-        <!-- Slide #1 -->
 
+        <!-- Slide #1 -->
         <!-- The Background Image -->
         <div class="slide" id="nature-gif">
 
-          <!-- The Menu -->
+          <!-- The Left Menu -->
           <nav role="navigation">
             <div id="menuToggle">
-              <input type="checkbox" />
+              <input type="checkbox" id="invisible" />
 
               <span></span>
               <span></span>
@@ -51,58 +49,97 @@
 
               <ul id="menu">
 
-          <!-- The Volume Sliders -->
-                <div id="player">
-            <!-- Block 1 -->
-                  <li><div class="sound">
+                  <!-- Block 1 -->
+                  <li>
                       <i class="icon-style fas fa-cloud-rain fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
-                      <div id="volume">
+                      <audio id="audio" autoplay>
+                          <source src='/nature sounds/light-rain.wav' type="audio/wav">
+                      </audio>
+
+                      <a href="" class="play-btn" id="btn"></a>
+
+                      <div class="visible">
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
                       </div>
-                    </div></li>
+                  </li>
 
                     <!-- Block 2 -->
-                    <li><div class="sound">
+                  <li>
                         <i class="icon-style1 fas fa-dove fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
-                        <div id="volume1">
+                        <audio id="audio" autoplay>
+                            <source src='/nature sounds/light-rain.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume1" min="0" max="1" step="0.1" value="1">
                         </div>
-                      </div></li>
+                    </li>
 
                     <!-- Block 3 -->
-                    <li><div class="sound">
+                  <li>
                         <i class="icon-style2 fas fa-fire-alt fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
-                        <div id="volume2">
+                        <audio id="audio" autoplay>
+                            <source src='/nature sounds/light-rain.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume2" min="0" max="1" step="0.1" value="1">
                         </div>
-                      </div></li>
+                    </li>
 
                     <!-- Block 4 -->
-                    <li><div class="sound">
+                  <li>
                         <i class="icon-style3 fas fa-bug fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
-                        <div id="volume3">
+                        <audio id="audio" autoplay>
+                            <source src='/nature sounds/light-rain.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume3" min="0" max="1" step="0.1" value="1">
                         </div>
-                      </div></li>
+                    </li>
 
                      <!-- Block 5 -->
-                      <li><div class="sound">
+                    <li>
                           <i class="icon-style4 fas fa-water fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
-                          <div id="volume4">
+                          <audio id="audio" autoplay>
+                              <source src='/nature sounds/light-rain.wav' type="audio/wav">
+                          </audio>
+
+                          <a href="" class="play-btn" id="btn"></a>
+
+                          <div class="visible">
+                            <input type="range" id="volume4" min="0" max="1" step="0.1" value="1">
                           </div>
-                        </div></li>
+                      </li>
 
                       <!-- Block 6 -->
-                      <li><div class="sound">
+                    <li>
                           <i class="icon-style5 fas fa-wind fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
-                          <div id="volume5">
-                          </div>
-                        </div></li>
+                          <audio id="audio" autoplay>
+                              <source src='/nature sounds/light-rain.wav' type="audio/wav">
+                          </audio>
 
-                    </div>
+                          <a href="" class="play-btn" id="btn"></a>
+
+                          <div class="visible">
+                            <input type="range" id="volume5" min="0" max="1" step="0.1" value="1">
+                          </div>
+                      </li>
+
           <!-- End of the Volume Sliders -->
                   </ul>
                 </div>
               </nav>
-          <!-- End of the Menu -->
+          <!-- End of the Left Menu -->
 
-          <!-- The Right Menu/Task List -->
+          <!-- The Right Menu -->
           <nav>
             <div class="container">
               <ul class="navbar-right">
@@ -111,23 +148,25 @@
             </div>
           </nav>
 
+          <!-- The Task List -->
           <div class="container">
             <div class="notepad">
 
               <div class="wrap">
-            <form class="add-new-task" autocomplete="off">
-              <input type="text" name="new-task" placeholder="Add a new task.." />
-            </form>
-            <div class="task-list">
-              <ul>
-                <li>
-                </li>
-              </ul>
-            </div>
-          </div>
+                <form class="add-new-task" autocomplete="off">
+                  <input type="text" name="new-task" placeholder="Add a new task.." style="font-style: italic" />
+                </form>
+                <div class="task-list">
+                  <ul>
+                    <li>
+                    </li>
+                  </ul>
+                </div>
+              </div>
 
+              </div>
             </div>
-          </div>
+          <!-- End of the Right Menu -->
 
           <!-- The Center Image -->
            <div class="mini-slide" id="nature-img">
@@ -207,7 +246,7 @@
 
           <!-- The Volume Sliders -->
           <div id="player">
-            <div id="volume"></div>
+            <div id="volume-bar"></div>
             <div id="volume1"></div>
             <div id="volume2"></div>
             <div id="volume3"></div>
@@ -292,7 +331,7 @@
 
           <!-- The Volume Sliders -->
           <div id="player">
-            <div id="volume"></div>
+            <div id="volume-bar"></div>
             <div id="volume1"></div>
             <div id="volume2"></div>
             <div id="volume3"></div>
@@ -377,7 +416,7 @@
 
           <!-- The Volume Sliders -->
           <div id="player">
-            <div id="volume"></div>
+            <div id="volume-bar"></div>
             <div id="volume1"></div>
             <div id="volume2"></div>
             <div id="volume3"></div>
@@ -462,7 +501,7 @@
 
           <!-- The Volume Sliders -->
           <div id="player">
-            <div id="volume"></div>
+            <div id="volume-bar"></div>
             <div id="volume1"></div>
             <div id="volume2"></div>
             <div id="volume3"></div>
@@ -547,7 +586,7 @@
 
           <!-- The Volume Sliders -->
           <div id="player">
-            <div id="volume"></div>
+            <div id="volume-bar"></div>
             <div id="volume1"></div>
             <div id="volume2"></div>
             <div id="volume3"></div>

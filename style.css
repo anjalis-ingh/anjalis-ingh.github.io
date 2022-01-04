@@ -8,26 +8,26 @@ body {
     position:fixed;
     top: 0;
     z-index:1;
-    display:flex;
-    width:100%;
-    height:40px;
+    display: flex;
+    width: 100%;
+    height: 40px;
     opacity: 1.0;
 
-    right:32px;
-    top:90%;
+    right: 32px;
+    top: 90%;
     transform: translateY(-10%);
 }
 
 .navbar ul {
     display: flex;
-    list-style:none;
+    list-style: none;
     width: 100%;
-    justify-content:center;
+    justify-content: center;
 }
 
 .navbar ul li{
     margin: 0 0.8rem;
-    padding:1rem;
+    padding: 1rem;
 }
 
 .navbar a {
@@ -70,7 +70,7 @@ body {
 /* End of the Navigation Bar Customization */
 
 /* The Sound Icon */
-.loader{
+.loader {
   height: 100px;
   width: 35%;
   padding: 1em;
@@ -221,7 +221,6 @@ p {
       top: 0em;
 }
 
-
 /* End of the Slideshow Slider Customization */
 
 /* The Center Image Links */
@@ -284,32 +283,32 @@ p {
 }
 
 .icon-style {
-  margin-left: -410px;
-  margin-top: -25px;
+  margin-left: 30px;
+  margin-top: 5px;
 }
 
 .icon-style1 {
-  margin-left: -410px;
-  margin-top: 30px;
+  margin-left: -415px;
+  margin-top: 70px;
 }
 
 .icon-style2 {
-  margin-left: -410px;
-  margin-top: 85px;
+  margin-left: -415px;
+  margin-top: 150px;
 }
 .icon-style3 {
-  margin-left: -410px;
-  margin-top: 140px;
+  margin-left: -415px;
+  margin-top: 230px;
 }
 
 .icon-style4 {
-  margin-left: -410px;
-  margin-top: 195px;
+  margin-left: -415px;
+  margin-top: 310px;
 }
 
 .icon-style5 {
-  margin-left: -410px;
-  margin-top: 250px;
+  margin-left: -415px;
+  margin-top: 390px;
 }
 
 /* The Volume Sliders */
@@ -319,20 +318,22 @@ p {
   height: 50px;
   position: relative;
   margin: 0 auto;
-  top: 10px;
-  left: 300px;
+  top: -5px;
+  left: 285px;
 }
 
 #volume {
   position: absolute;
-  left: -430px;
+  left: -315px;
   margin: 0 auto;
   height: 1.5px;
   /* length of the slider */
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 40px;
+  top: -10px;
+  margin-top: 200px;
+  margin-left: 400px;
 }
 
 #volume1 {
@@ -343,7 +344,7 @@ p {
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 115px;
+  top: 120px;
 }
 
 #volume2 {
@@ -354,7 +355,7 @@ p {
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 190px;
+  top: 200px;
 }
 
 #volume3 {
@@ -365,7 +366,7 @@ p {
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 265px;
+  top: 280px;
 }
 
 #volume4 {
@@ -376,7 +377,7 @@ p {
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 340px;
+  top: 360px;
 }
 
 #volume5 {
@@ -387,15 +388,13 @@ p {
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 415px;
+  top: 440px;
 }
 
 /* End of the Volume Sliders */
 
 /* The Left Menu */
-
-#menuToggle
-{
+#menuToggle {
   display: block;
   position: relative;
   top: 25px;
@@ -407,26 +406,19 @@ p {
   user-select: none;
 }
 
-#menuToggle input
-{
+#menuToggle input {
   display: block;
-  width: 40px;
-  height: 32px;
   position: absolute;
-  top: -7px;
-  left: -5px;
 
   cursor: pointer;
 
-  opacity: 0;
   z-index: 2;
 
   -webkit-touch-callout: none;
 }
 
 
-#menuToggle span
-{
+#menuToggle span {
   display: block;
   width: 33px;
   height: 4px;
@@ -445,37 +437,31 @@ p {
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
-{
+#menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
-{
+#menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
-{
+#menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
 
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
+#menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
+#menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-#menu
-{
+#menu {
   position: relative;
   width: 300px;
   height: 400px;
@@ -494,29 +480,27 @@ p {
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
-#menu li
-{
+#menu li {
   padding: 10px 0;
   font-size: 22px;
 }
 
-#menuToggle input:checked ~ ul
-{
+#menuToggle input:checked ~ ul {
   transform: none;
 }
 
 /* End of The Left Menu */
 
 /* The Right Menu */
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
-
 .navbar-right {
   float: right;
 }
+
 li {
   display: inline;
   padding-right: -20px;
 }
+
 a {
   /* color of the icon */
   color: LightGray;
@@ -524,9 +508,9 @@ a {
 
 #list {
   position: relative;
-  top: 5px;
+  top: 2px;
   /* moves icon left and right*/
-  left: 1050px;
+  left: 1060px;
 }
 
 .container {
@@ -540,7 +524,7 @@ a {
   float: right;
   background: #f1f1f1;
   /* changes the width of the box */
-  width: 400px;
+  width: 300px;
   position: relative;
   border-radius: 3px;
   /* changes the height of the box */
@@ -565,27 +549,25 @@ a {
 /* End of the Right Menu */
 
 /* The Task List */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
-
 .wrap {
   /* width of the both boxes */
-  width: 350px;
+  width: 280px;
   margin: 0 auto;
-  font: normal 14px "Open Sans", Arial, sans-serif;
+  font: normal 14px "Open Sans";
   color: #999;
 }
 
 .task-list {
   /* width of task list box */
-  width: 98%;
+  width: 95%;
   min-height: 300px;
   background: #fff;
   box-shadow: 2px 2px 0px #ddd;
   /* distance btwn task bar and list */
   margin-top: -40px;
-  padding: 22px 6%;
+  padding: 20px 6%;
   position: relative;
-  left: 5px;
+  left: -10px;
 }
 
 .task-list li {
@@ -627,8 +609,8 @@ a {
   padding-bottom: 60px;
   position: relative;
   /* moves add task box left and right */
-  left: 5px;
-  width: 345px;
+  left: -10px;
+  width: 300px;
 }
 
 .add-new-task input[type="text"] {
@@ -649,3 +631,53 @@ a {
 }
 
 /* End of the Task List */
+
+/* The Play Button */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.play-btn {
+  /* Positioning */
+  position: absolute;
+  margin-left: -2px;
+  margin-top: -10px;
+  /* Sizing */
+  width: 20px;
+  height: 20px;
+  /* Border styling */
+  border-style: solid;
+  border-color: transparent HoneyDew transparent HoneyDew;
+  border-width: 10px 0 10px 20px;
+  bottom: 200px;
+}
+
+.play-btn.stop, .play-btn.to-play {
+  /* Animate morphing */
+  transition: transform 300ms cubic-bezier(0, 0, 0.2, 1), border-top-width 300ms cubic-bezier(0, 0, 0.2, 1), border-bottom-width 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.play-btn.stop {
+  /* Morph to a stop button */
+  transform: rotate(90deg);
+  border-width: 0 0 0 20px;
+}
+
+.play-btn.to-play {
+  /* Morph back from a stop button to a play button */
+  transform: rotate(180deg);
+  border-width: 10px 20px 10px 0;
+}
+
+/* End of the Play Button */
+
+/* Opacity */
+#visible {
+  opacity: 100;
+}
+
+#invisible {
+  opacity: 0;
+}
