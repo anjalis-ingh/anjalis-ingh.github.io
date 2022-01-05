@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-    // Player Button
+    // Player Buttons
     $("#btn").on("click", function (e) {
         var audio = $("#audio")[0];
         if (audio.paused) {
@@ -10,11 +10,85 @@ $(document).ready(function() {
         }
     });
 
-    // Volume Bar
+    $("#btn1").on("click", function (e) {
+        var audio = $("#audio1")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn2").on("click", function (e) {
+        var audio = $("#audio2")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn3").on("click", function (e) {
+        var audio = $("#audio3")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn4").on("click", function (e) {
+        var audio = $("#audio4")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn5").on("click", function (e) {
+        var audio = $("#audio5")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    // End of Player Buttons
+
+    // Volume Bars
     $("#volume").on("change input", function () {
         var audio  =  $("#audio")[0];
         audio.volume = $(this).val();
     });
+
+    $("#volume1").on("change input", function () {
+        var audio  =  $("#audio1")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume2").on("change input", function () {
+        var audio  =  $("#audio2")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume3").on("change input", function () {
+        var audio  =  $("#audio3")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume4").on("change input", function () {
+        var audio  =  $("#audio4")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume5").on("change input", function () {
+        var audio  =  $("#audio5")[0];
+        audio.volume = $(this).val();
+    });
+
+      // End of the Volume Bars
 
     $(function() {
 

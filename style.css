@@ -76,7 +76,7 @@ body {
   padding: 1em;
   line-height: 330px;
   position: relative;
-  right: 5px;
+  right: 3px;
 }
 
 
@@ -86,7 +86,7 @@ p {
   font-style: italic;
   line-height: 310px;
   position: relative;
-  right: 3px;
+  right: 0px;
 }
 
 /* The Slideshow Slider Customization */
@@ -288,27 +288,27 @@ p {
 }
 
 .icon-style1 {
-  margin-left: -415px;
-  margin-top: 70px;
+  margin-left: 30px;
+  margin-top: 90px;
 }
 
 .icon-style2 {
-  margin-left: -415px;
-  margin-top: 150px;
+  margin-left: 33px;
+  margin-top: 175px;
 }
 .icon-style3 {
-  margin-left: -415px;
-  margin-top: 230px;
+  margin-left: 32px;
+  margin-top: 260px;
 }
 
 .icon-style4 {
-  margin-left: -415px;
-  margin-top: 310px;
+  margin-left: 30px;
+  margin-top: 345px;
 }
 
 .icon-style5 {
-  margin-left: -415px;
-  margin-top: 390px;
+  margin-left: 33px;
+  margin-top: 430px;
 }
 
 /* The Volume Sliders */
@@ -338,57 +338,67 @@ p {
 
 #volume1 {
   position: absolute;
-  left: -430px;
+  left: -315px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 120px;
+  top: 75px;
+  margin-top: 200px;
+  margin-left: 400px;
 }
 
 #volume2 {
   position: absolute;
-  left: -430px;
+  left: -315px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 200px;
+  top: 160px;
+  margin-top: 200px;
+  margin-left: 400px;
 }
 
 #volume3 {
   position: absolute;
-  left: -430px;
+  left: -315px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 280px;
+  top: 245px;
+  margin-top: 200px;
+  margin-left: 400px;
 }
 
 #volume4 {
   position: absolute;
-  left: -430px;
+  left: -315px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 360px;
+  top: 330px;
+  margin-top: 200px;
+  margin-left: 400px;
 }
 
 #volume5 {
   position: absolute;
-  left: -430px;
+  left: -315px;
   margin: 0 auto;
   height: 1.5px;
   width: 80px;
   background: #555;
   border-radius: 15px;
-  top: 440px;
+  top: 415px;
+  margin-top: 200px;
+  margin-left: 400px;
 }
 
 /* End of the Volume Sliders */
@@ -399,24 +409,16 @@ p {
   position: relative;
   top: 25px;
   left: 25px;
-
   z-index: 1;
-
-  -webkit-user-select: none;
   user-select: none;
 }
 
 #menuToggle input {
   display: block;
   position: absolute;
-
   cursor: pointer;
-
   z-index: 2;
-
-  -webkit-touch-callout: none;
 }
-
 
 #menuToggle span {
   display: block;
@@ -492,13 +494,19 @@ p {
 /* End of The Left Menu */
 
 /* The Right Menu */
+.container {
+  /* moves the everything left to right */
+  width: 60%;
+  user-select: none;
+}
+
 .navbar-right {
   float: right;
+  -webkit-font-smoothing: antialiased;
 }
 
 li {
   display: inline;
-  padding-right: -20px;
 }
 
 a {
@@ -508,14 +516,9 @@ a {
 
 #list {
   position: relative;
-  top: 2px;
+  top: 1px;
   /* moves icon left and right*/
-  left: 1060px;
-}
-
-.container {
-  /* moves the everything left to right */
-  width: 60%;
+  left: 1120px;
 }
 
 .notepad {
@@ -529,7 +532,8 @@ a {
   border-radius: 3px;
   /* changes the height of the box */
   padding: 20px;
-  left: 190px;
+  left: 245px;
+  display: none;
 }
 
 .notepad:after {
@@ -559,15 +563,15 @@ a {
 
 .task-list {
   /* width of task list box */
-  width: 95%;
-  min-height: 300px;
+  width: 265px;
+  min-height: 310px;
   background: #fff;
   box-shadow: 2px 2px 0px #ddd;
   /* distance btwn task bar and list */
   margin-top: -40px;
   padding: 20px 6%;
   position: relative;
-  left: -10px;
+  left: -3px;
 }
 
 .task-list li {
@@ -609,8 +613,8 @@ a {
   padding-bottom: 60px;
   position: relative;
   /* moves add task box left and right */
-  left: -10px;
-  width: 300px;
+  left: -3px;
+  width: 265px;
 }
 
 .add-new-task input[type="text"] {
@@ -671,6 +675,26 @@ a {
   border-width: 10px 20px 10px 0;
 }
 
+#btn1 {
+  bottom: 115px;
+}
+
+#btn2 {
+  bottom: 30px;
+}
+
+#btn3 {
+  bottom: -55px;
+}
+
+#btn4 {
+  bottom: -140px;
+}
+
+#btn5 {
+  bottom: -225px;
+}
+
 /* End of the Play Button */
 
 /* Opacity */
@@ -680,4 +704,9 @@ a {
 
 #invisible {
   opacity: 0;
+}
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
 }
