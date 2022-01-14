@@ -10,7 +10,7 @@
 
   <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js" integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
   <script src="scripts.js"></script>
 
   <link rel="stylesheet" href="style.css">
@@ -20,28 +20,384 @@
 
   <!-- The Navigation Bar -->
   <div class="slideshow-slider">
-    <nav class="navbar">
-     <ul>
-      <li><a href="#nature-gif">1</a></li>
-      <li><a href="#park-gif">2</a></li>
-      <li><a href="#cafe-gif">3</a></li>
-      <li><a href="#library-gif">4</a></li>
-      <li><a href="#home-gif">5</a></li>
-      <li><a href="#bus-gif">6</a></li>
-    </ul>
-  </nav>
-
-  <!-- The Slides -->
-    <div class="slides">
 
         <!-- Slide #1 -->
         <!-- The Background Image -->
         <div class="slide" id="nature-gif">
 
           <!-- The Left Menu -->
-          <nav>
+          <nav id="fixing">
             <div id="menuToggle">
-              <input type="checkbox" id="invisible" />
+              <input type="checkbox" id="fix" />
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
+
+                  <!-- Block 1 -->
+                  <li>
+                      <i class="icons fas fa-cloud-rain fa-3x" id="icon-style" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                      <audio id="audio" loop>
+                          <source src='/nature sounds/light-rain.wav' type="audio/wav">
+                      </audio>
+
+                      <a href="" class="play-btn" id="btn"></a>
+
+                      <div class="visible">
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                      </div>
+                  </li>
+
+                    <!-- Block 2 -->
+                  <li>
+                        <i class="icons fas fa-dove fa-3x" id="icon-style1" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio1" loop>
+                            <source src='/nature sounds/birds.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn1"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume1" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 3 -->
+                  <li>
+                        <i class="icons fas fa-fire-alt fa-3x" id="icon-style2" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio2" loop>
+                            <source src='/nature sounds/campfire.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn2"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume2" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 4 -->
+                  <li>
+                        <i class="icons fas fa-bug fa-3x" id="icon-style3" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio3" loop>
+                            <source src='/nature sounds/crickets:grasshoppers.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn3"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume3" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                     <!-- Block 5 -->
+                    <li>
+                          <i class="icons fas fa-water fa-3x" id="icon-style4" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                          <audio id="audio4" loop>
+                              <source src='/nature sounds/river:waterstream.mp3' type="audio/mpeg">
+                          </audio>
+
+                          <a href="" class="play-btn" id="btn4"></a>
+
+                          <div class="visible">
+                            <input type="range" id="volume4" min="0" max="1" step="0.1" value="1">
+                          </div>
+                      </li>
+
+                      <!-- Block 6 -->
+                    <li>
+                          <i class="icons fas fa-wind fa-3x" id="icon-style5" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                          <audio id="audio5" loop>
+                              <source src='/nature sounds/wind.wav' type="audio/wav">
+                          </audio>
+
+                          <a href="" class="play-btn" id="btn5"></a>
+
+                          <div class="visible">
+                            <input type="range" id="volume5" min="0" max="1" step="0.1" value="1">
+                          </div>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+          <!-- End of the Left Menu -->
+
+          <!-- The Right Menu -->
+          <nav>
+              <ul id="navbar-right">
+                <li><a href="#" id="list"><i class="fa fa-list fa-2x"></i></a></li>
+              </ul>
+          </nav>
+
+          <!-- The Task List -->
+            <div class="notepad">
+
+              <div class="wrap">
+                <form class="add-new-task" autocomplete="off">
+                  <input type="text" name="new-task" placeholder="Add a new task.." style="font-style: italic" />
+                </form>
+                <div class="task-list">
+                  <ul>
+                    <li>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <!-- End of the Right Menu -->
+
+          <!-- The Center Image -->
+           <div class="mini-slide" id="nature-img">
+
+          <!-- The Left Icon -->
+             <div class="loader">
+               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                 <rect x="0" y="13" width="4" height="5" fill="#2D4030">
+                   <animate attributeName="height" attributeType="XML"
+                     values="5;21;5"
+                     begin="0s" dur="0.6s" repeatCount="indefinite" />
+                   <animate attributeName="y" attributeType="XML"
+                     values="13; 5; 13"
+                     begin="0s" dur="0.6s" repeatCount="indefinite" />
+                 </rect>
+                 <rect x="10" y="13" width="4" height="5" fill="#2D4030">
+                   <animate attributeName="height" attributeType="XML"
+                     values="5;21;5"
+                     begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                   <animate attributeName="y" attributeType="XML"
+                     values="13; 5; 13"
+                     begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                 </rect>
+                 <rect x="20" y="13" width="4" height="5" fill="#2D4030">
+                   <animate attributeName="height" attributeType="XML"
+                     values="5;21;5"
+                     begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                   <animate attributeName="y" attributeType="XML"
+                     values="13; 5; 13"
+                     begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                 </rect>
+               </svg>
+              </div>
+
+              <!-- The Caption -->
+              <p> Nature </p>
+
+              <!-- The Right Icon -->
+              <div class="loader ">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <rect x="0" y="13" width="4" height="5" fill="#2D4030">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="10" y="13" width="4" height="5" fill="#2D4030">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="20" y="13" width="4" height="5" fill="#2D4030">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                </svg>
+              </div>
+
+          </div>
+        </div>
+
+
+        <!-- Slide #2 -->
+        <!-- The Background Image -->
+        <div class="slide" id="park-gif">
+
+          <!-- The Left Menu -->
+          <nav id="fixing">
+            <div id="menuToggle">
+              <input type="checkbox" id="fix" />
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
+
+                  <!-- Block 1 -->
+                  <li>
+                      <i class="icons fas fa-dove fa-3x" id="icon-style" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                      <audio id="audio6" loop>
+                          <source src='/park sounds/airplane:bird:outside.mp3' type="audio/mpeg">
+                      </audio>
+
+                      <a href="" class="play-btn" id="btn6"></a>
+
+                      <div class="visible">
+                        <input type="range" id="volume6" min="0" max="1" step="0.1" value="1">
+                      </div>
+                  </li>
+
+                    <!-- Block 2 -->
+                  <li>
+                        <i class="icons fas fa-biking fa-3x" id="icon-style6" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio7" loop>
+                            <source src='/park sounds/biking.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn7"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume7" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 3 -->
+                  <li>
+                        <i class="icons fas fa-users fa-3x" id="icon-style7" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio8" loop>
+                            <source src='/park sounds/walking.mp3' type="audio/mpeg">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn8"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume8" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 4 -->
+                  <li>
+                        <i class="icons fas fa-cloud-rain fa-3x" id="icon-style3" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio9" loop>
+                            <source src='/park sounds/rain.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn9"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume9" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+          <!-- End of the Left Menu -->
+
+          <!-- The Right Menu -->
+          <nav>
+              <ul id="navbar-right">
+                <li><a href="#" id="list1"><i class="fa fa-list fa-2x"></i></a></li>
+              </ul>
+          </nav>
+
+          <!-- The Task List -->
+            <div class="notepad1">
+
+              <div class="wrap">
+                <form class="add-new-task1" autocomplete="off">
+                  <input type="text" name="new-task1" placeholder="Add a new task.." style="font-style: italic" />
+                </form>
+                <div class="task-list1">
+                  <ul>
+                    <li>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <!-- End of the Right Menu -->
+
+          <!-- The Center Image -->
+          <div class="mini-slide" id="park-img">
+
+            <!-- The Left Icon -->
+               <div class="loader" style="left: 2px;">
+                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                   <rect x="0" y="13" width="4" height="5" fill="#f493b7">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="10" y="13" width="4" height="5" fill="#f493b7">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                   <rect x="20" y="13" width="4" height="5" fill="#f493b7">
+                     <animate attributeName="height" attributeType="XML"
+                       values="5;21;5"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                     <animate attributeName="y" attributeType="XML"
+                       values="13; 5; 13"
+                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                   </rect>
+                 </svg>
+                </div>
+
+              <!-- The Caption -->
+              <p style="left: 6px;"> Park </p>
+
+              <!-- The Right Icon -->
+              <div class="loader " style="left: 4px;">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                  <rect x="0" y="13" width="4" height="5" fill="#f493b7">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="10" y="13" width="4" height="5" fill="#f493b7">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                  <rect x="20" y="13" width="4" height="5" fill="#f493b7">
+                    <animate attributeName="height" attributeType="XML"
+                      values="5;21;5"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                    <animate attributeName="y" attributeType="XML"
+                      values="13; 5; 13"
+                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+                  </rect>
+                </svg>
+              </div>
+
+          </div>
+        </div>
+
+        <!-- Slide #3 -->
+        <!-- The Background Image -->
+        <div class="slide" id="cafe-gif">
+
+          <!-- The Left Menu -->
+          <nav id="fixing">
+            <div id="menuToggle">
+              <input type="checkbox" id="fix" />
 
               <span></span>
               <span></span>
@@ -132,218 +488,16 @@
                             <input type="range" id="volume5" min="0" max="1" step="0.1" value="1">
                           </div>
                       </li>
-
-          <!-- End of the Volume Sliders -->
                   </ul>
                 </div>
               </nav>
           <!-- End of the Left Menu -->
 
-          <!-- The Right Menu -->
-          <nav>
-            <div class="container">
-              <ul class="navbar-right">
-                <li><a href="#" id="list"><i class="fa fa-list fa-2x"></i></a></li>
-              </ul>
-            </div>
-          </nav>
-
-          <!-- The Task List -->
-          <div class="container">
-            <div class="notepad">
-
-              <div class="wrap">
-                <form class="add-new-task" autocomplete="off">
-                  <input type="text" name="new-task" placeholder="Add a new task.." style="font-style: italic" />
-                </form>
-                <div class="task-list">
-                  <ul>
-                    <li>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-
-              </div>
-            </div>
-          <!-- End of the Right Menu -->
-
-          <!-- The Center Image -->
-           <div class="mini-slide" id="nature-img">
-
-          <!-- The Left Icon -->
-             <div class="loader loader--style6">
-               <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                  width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                 <rect x="0" y="13" width="4" height="5" fill="#2D4030">
-                   <animate attributeName="height" attributeType="XML"
-                     values="5;21;5"
-                     begin="0s" dur="0.6s" repeatCount="indefinite" />
-                   <animate attributeName="y" attributeType="XML"
-                     values="13; 5; 13"
-                     begin="0s" dur="0.6s" repeatCount="indefinite" />
-                 </rect>
-                 <rect x="10" y="13" width="4" height="5" fill="#2D4030">
-                   <animate attributeName="height" attributeType="XML"
-                     values="5;21;5"
-                     begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                   <animate attributeName="y" attributeType="XML"
-                     values="13; 5; 13"
-                     begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                 </rect>
-                 <rect x="20" y="13" width="4" height="5" fill="#2D4030">
-                   <animate attributeName="height" attributeType="XML"
-                     values="5;21;5"
-                     begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                   <animate attributeName="y" attributeType="XML"
-                     values="13; 5; 13"
-                     begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                 </rect>
-               </svg>
-              </div>
-
-              <!-- The Caption -->
-              <p> Nature </p>
-
-              <!-- The Right Icon -->
-              <div class="loader loader--style6">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                  <rect x="0" y="13" width="4" height="5" fill="#2D4030">
-                    <animate attributeName="height" attributeType="XML"
-                      values="5;21;5"
-                      begin="0s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML"
-                      values="13; 5; 13"
-                      begin="0s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="10" y="13" width="4" height="5" fill="#2D4030">
-                    <animate attributeName="height" attributeType="XML"
-                      values="5;21;5"
-                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML"
-                      values="13; 5; 13"
-                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="20" y="13" width="4" height="5" fill="#2D4030">
-                    <animate attributeName="height" attributeType="XML"
-                      values="5;21;5"
-                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML"
-                      values="13; 5; 13"
-                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                </svg>
-              </div>
-
-          </div>
-        </div>
-
-
-        <!-- Slide #2 -->
-        <!-- The Background Image -->
-        <div class="slide" id="park-gif">
-
-          <!-- The Volume Sliders -->
-          <div id="player">
-            <div id="volume-bar"></div>
-            <div id="volume1"></div>
-            <div id="volume2"></div>
-            <div id="volume3"></div>
-            <div id="volume4"></div>
-            <div id="volume5"></div>
-          </div>
-
-          <!-- The Center Image -->
-          <div class="mini-slide" id="park-img">
-
-            <!-- The Left Icon -->
-               <div class="loader loader--style6">
-                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                   <rect x="0" y="13" width="4" height="5" fill="#AC6973">
-                     <animate attributeName="height" attributeType="XML"
-                       values="5;21;5"
-                       begin="0s" dur="0.6s" repeatCount="indefinite" />
-                     <animate attributeName="y" attributeType="XML"
-                       values="13; 5; 13"
-                       begin="0s" dur="0.6s" repeatCount="indefinite" />
-                   </rect>
-                   <rect x="10" y="13" width="4" height="5" fill="#AC6973">
-                     <animate attributeName="height" attributeType="XML"
-                       values="5;21;5"
-                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                     <animate attributeName="y" attributeType="XML"
-                       values="13; 5; 13"
-                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                   </rect>
-                   <rect x="20" y="13" width="4" height="5" fill="#AC6973">
-                     <animate attributeName="height" attributeType="XML"
-                       values="5;21;5"
-                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                     <animate attributeName="y" attributeType="XML"
-                       values="13; 5; 13"
-                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                   </rect>
-                 </svg>
-                </div>
-
-              <!-- The Caption -->
-              <p> Park </p>
-
-              <!-- The Right Icon -->
-              <div class="loader loader--style6">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                   width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                  <rect x="0" y="13" width="4" height="5" fill="#AC6973">
-                    <animate attributeName="height" attributeType="XML"
-                      values="5;21;5"
-                      begin="0s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML"
-                      values="13; 5; 13"
-                      begin="0s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="10" y="13" width="4" height="5" fill="#AC6973">
-                    <animate attributeName="height" attributeType="XML"
-                      values="5;21;5"
-                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML"
-                      values="13; 5; 13"
-                      begin="0.15s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                  <rect x="20" y="13" width="4" height="5" fill="#AC6973">
-                    <animate attributeName="height" attributeType="XML"
-                      values="5;21;5"
-                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                    <animate attributeName="y" attributeType="XML"
-                      values="13; 5; 13"
-                      begin="0.3s" dur="0.6s" repeatCount="indefinite" />
-                  </rect>
-                </svg>
-              </div>
-
-          </div>
-        </div>
-
-        <!-- Slide #3 -->
-        <!-- The Background Image -->
-        <div class="slide" id="cafe-gif">
-
-          <!-- The Volume Sliders -->
-          <div id="player">
-            <div id="volume-bar"></div>
-            <div id="volume1"></div>
-            <div id="volume2"></div>
-            <div id="volume3"></div>
-            <div id="volume4"></div>
-            <div id="volume5"></div>
-          </div>
-
           <!-- The Center Image -->
           <div class="mini-slide" id="cafe-img">
 
             <!-- The Left Icon -->
-               <div class="loader loader--style6">
+               <div class="loader " style="left: 2px;">
                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                    <rect x="0" y="13" width="4" height="5" fill="#66422D">
@@ -374,10 +528,10 @@
                 </div>
 
               <!-- The Caption -->
-              <p> Cafe </p>
+              <p style="left: 6px;"> Cafe </p>
 
               <!-- The Right Icon -->
-              <div class="loader loader--style6">
+              <div class="loader " style="left: 4px;">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                   <rect x="0" y="13" width="4" height="5" fill="#66422D">
@@ -414,24 +568,137 @@
         <!-- The Background Image -->
         <div class="slide" id="library-gif">
 
-          <!-- The Volume Sliders -->
-          <div id="player">
-            <div id="volume-bar"></div>
-            <div id="volume1"></div>
-            <div id="volume2"></div>
-            <div id="volume3"></div>
-            <div id="volume4"></div>
-            <div id="volume5"></div>
-          </div>
+          <!-- The Left Menu -->
+          <nav id="fixing">
+            <div id="menuToggle">
+              <input type="checkbox" id="fix" />
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
+
+                  <!-- Block 1 -->
+                  <li>
+                      <i class="icons fas fa-users fa-3x" id="icon-style" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                      <audio id="audio10" loop>
+                          <source src='/library sounds/chatter.wav' type="audio/wav">
+                      </audio>
+
+                      <a href="" class="play-btn" id="btn10"></a>
+
+                      <div class="visible">
+                        <input type="range" id="volume10" min="0" max="1" step="0.1" value="1">
+                      </div>
+                  </li>
+
+                    <!-- Block 2 -->
+                  <li>
+                        <i class="icons fas fa-keyboard fa-3x" id="icon-style8" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio11" loop>
+                            <source src='/library sounds/keyboard-typing.mp3' type="audio/mpeg">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn11"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume11" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 3 -->
+                  <li>
+                        <i class="icons fas fa-book-open fa-3x" id="icon-style2" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio12" loop>
+                            <source src='/library sounds/page-turning.mp3' type="audio/mpeg">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn12"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume12" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 4 -->
+                  <li>
+                        <i class="icons fas fa-cloud-rain fa-3x" id="icon-style9" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio13" loop>
+                            <source src='/park sounds/rain.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn13"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume13" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 5 -->
+                  <li>
+                        <i class="icons fas fa-fire-alt fa-3x" id="icon-style10" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio14" loop>
+                            <source src='/library sounds/fire-crackling.mp3' type="audio/mpeg">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn14"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume14" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 6 -->
+                  <li>
+                        <i class="icons fas fa-pen fa-3x" id="icon-style11" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio15" loop>
+                            <source src='/library sounds/writing.mp3' type="audio/mpeg">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn15"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume15" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+          <!-- End of the Left Menu -->
+
+          <!-- The Right Menu -->
+          <nav>
+              <ul id="navbar-right">
+                <li><a href="#" id="list2"><i class="fa fa-list fa-2x"></i></a></li>
+              </ul>
+          </nav>
+
+          <!-- The Task List -->
+            <div class="notepad2">
+
+              <div class="wrap">
+                <form class="add-new-task2" autocomplete="off">
+                  <input type="text" name="new-task2" placeholder="Add a new task.." style="font-style: italic" />
+                </form>
+                <div class="task-list2">
+                  <ul>
+                    <li>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <!-- End of the Right Menu -->
 
           <!-- The Center Image -->
           <div class="mini-slide" id="library-img">
 
             <!-- The Left Icon -->
-               <div class="loader loader--style6">
+               <div class="loader ">
                  <svg version="1.1" id="color1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                   <rect x="0" y="13" width="4" height="5" fill="#A4485C">
+                   <rect x="0" y="13" width="4" height="5" fill="#cc4563">
                      <animate attributeName="height" attributeType="XML"
                        values="5;21;5"
                        begin="0s" dur="0.6s" repeatCount="indefinite" />
@@ -439,7 +706,7 @@
                        values="13; 5; 13"
                        begin="0s" dur="0.6s" repeatCount="indefinite" />
                    </rect>
-                   <rect x="10" y="13" width="4" height="5" fill="#A4485C">
+                   <rect x="10" y="13" width="4" height="5" fill="#cc4563">
                      <animate attributeName="height" attributeType="XML"
                        values="5;21;5"
                        begin="0.15s" dur="0.6s" repeatCount="indefinite" />
@@ -447,7 +714,7 @@
                        values="13; 5; 13"
                        begin="0.15s" dur="0.6s" repeatCount="indefinite" />
                    </rect>
-                   <rect x="20" y="13" width="4" height="5" fill="#A4485C">
+                   <rect x="20" y="13" width="4" height="5" fill="#cc4563">
                      <animate attributeName="height" attributeType="XML"
                        values="5;21;5"
                        begin="0.3s" dur="0.6s" repeatCount="indefinite" />
@@ -462,10 +729,10 @@
               <p> Library </p>
 
               <!-- The Right Icon -->
-              <div class="loader loader--style6">
+              <div class="loader ">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
-                  <rect x="0" y="13" width="4" height="5" fill="#A4485C">
+                  <rect x="0" y="13" width="4" height="5" fill="#cc4563">
                     <animate attributeName="height" attributeType="XML"
                       values="5;21;5"
                       begin="0s" dur="0.6s" repeatCount="indefinite" />
@@ -473,7 +740,7 @@
                       values="13; 5; 13"
                       begin="0s" dur="0.6s" repeatCount="indefinite" />
                   </rect>
-                  <rect x="10" y="13" width="4" height="5" fill="#A4485C">
+                  <rect x="10" y="13" width="4" height="5" fill="#cc4563">
                     <animate attributeName="height" attributeType="XML"
                       values="5;21;5"
                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
@@ -481,7 +748,7 @@
                       values="13; 5; 13"
                       begin="0.15s" dur="0.6s" repeatCount="indefinite" />
                   </rect>
-                  <rect x="20" y="13" width="4" height="5" fill="#A4485C">
+                  <rect x="20" y="13" width="4" height="5" fill="#cc4563">
                     <animate attributeName="height" attributeType="XML"
                       values="5;21;5"
                       begin="0.3s" dur="0.6s" repeatCount="indefinite" />
@@ -499,21 +766,134 @@
         <!-- The Background Image -->
         <div class="slide" id="home-gif">
 
-          <!-- The Volume Sliders -->
-          <div id="player">
-            <div id="volume-bar"></div>
-            <div id="volume1"></div>
-            <div id="volume2"></div>
-            <div id="volume3"></div>
-            <div id="volume4"></div>
-            <div id="volume5"></div>
-          </div>
+          <!-- The Left Menu -->
+          <nav id="fixing">
+            <div id="menuToggle">
+              <input type="checkbox" id="fix" />
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
+
+                  <!-- Block 1 -->
+                  <li>
+                      <i class="icons fas fa-dove fa-3x" id="icon-style" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                      <audio id="audio16" loop>
+                          <source src='/home sounds/birds:traffic:window noise.mp3' type="audio/mpeg">
+                      </audio>
+
+                      <a href="" class="play-btn" id="btn16"></a>
+
+                      <div class="visible">
+                        <input type="range" id="volume16" min="0" max="1" step="0.1" value="1">
+                      </div>
+                  </li>
+
+                    <!-- Block 2 -->
+                  <li>
+                        <i class="icons fas fa-fan fa-3x" id="icon-style8" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio17" loop>
+                            <source src='/home sounds/fan.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn17"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume17" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 3 -->
+                  <li>
+                        <i class="icons fas fa-soap fa-3x" id="icon-style2" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio18" loop>
+                            <source src='/home sounds/dishwasher.mp3' type="audio/mpeg">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn18"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume18" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 4 -->
+                  <li>
+                        <i class="icons fas fa-cloud-rain fa-3x" id="icon-style12" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio19" loop>
+                            <source src='/park sounds/rain.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn19"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume19" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 5 -->
+                  <li>
+                        <i class="icons fas fa-sink fa-3x" id="icon-style13" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio20" loop>
+                            <source src='/home sounds/fridge.mp3' type="audio/mpeg">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn20"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume20" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 6 -->
+                  <li>
+                        <i class="icons fas fa-tv fa-3x" id="icon-style5" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio21" loop>
+                            <source src='/home sounds/tv.mp3' type="audio/mpeg">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn21"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume21" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+                  </ul>
+                </div>
+              </nav>
+          <!-- End of the Left Menu -->
+
+          <!-- The Right Menu -->
+          <nav>
+              <ul id="navbar-right">
+                <li><a href="#" id="list3"><i class="fa fa-list fa-2x"></i></a></li>
+              </ul>
+          </nav>
+
+          <!-- The Task List -->
+            <div class="notepad3">
+
+              <div class="wrap">
+                <form class="add-new-task3" autocomplete="off">
+                  <input type="text" name="new-task3" placeholder="Add a new task.." style="font-style: italic" />
+                </form>
+                <div class="task-list3">
+                  <ul>
+                    <li>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          <!-- End of the Right Menu -->
 
           <!-- The Center Image -->
           <div class="mini-slide" id="home-img">
 
             <!-- The Left Icon -->
-               <div class="loader loader--style6">
+               <div class="loader " style="right: 2px;">
                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                    <rect x="0" y="13" width="4" height="5" fill="#95B4A9">
@@ -544,10 +924,10 @@
                 </div>
 
               <!-- The Caption -->
-              <p> Home </p>
+              <p style="left: 4px;"> Home </p>
 
               <!-- The Right Icon -->
-              <div class="loader loader--style6">
+              <div class="loader " style="left: 2px;">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                   <rect x="0" y="13" width="4" height="5" fill="#95B4A9">
@@ -584,21 +964,110 @@
         <!-- The Background Image -->
         <div class="slide" id="bus-gif">
 
-          <!-- The Volume Sliders -->
-          <div id="player">
-            <div id="volume-bar"></div>
-            <div id="volume1"></div>
-            <div id="volume2"></div>
-            <div id="volume3"></div>
-            <div id="volume4"></div>
-            <div id="volume5"></div>
-          </div>
+          <!-- The Left Menu -->
+          <nav id="fixing">
+            <div id="menuToggle">
+              <input type="checkbox" id="fix" />
+
+              <span></span>
+              <span></span>
+              <span></span>
+
+              <ul id="menu">
+
+                  <!-- Block 1 -->
+                  <li>
+                      <i class="icon-style fas fa-cloud-rain fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                      <audio id="audio" loop>
+                          <source src='/nature sounds/light-rain.wav' type="audio/wav">
+                      </audio>
+
+                      <a href="" class="play-btn" id="btn"></a>
+
+                      <div class="visible">
+                        <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+                      </div>
+                  </li>
+
+                    <!-- Block 2 -->
+                  <li>
+                        <i class="icon-style1 fas fa-dove fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio1" loop>
+                            <source src='/nature sounds/birds.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn1"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume1" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 3 -->
+                  <li>
+                        <i class="icon-style2 fas fa-fire-alt fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio2" loop>
+                            <source src='/nature sounds/campfire.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn2"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume2" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                    <!-- Block 4 -->
+                  <li>
+                        <i class="icon-style3 fas fa-bug fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                        <audio id="audio3" loop>
+                            <source src='/nature sounds/crickets:grasshoppers.wav' type="audio/wav">
+                        </audio>
+
+                        <a href="" class="play-btn" id="btn3"></a>
+
+                        <div class="visible">
+                          <input type="range" id="volume3" min="0" max="1" step="0.1" value="1">
+                        </div>
+                    </li>
+
+                     <!-- Block 5 -->
+                    <li>
+                          <i class="icon-style4 fas fa-water fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                          <audio id="audio4" loop>
+                              <source src='/nature sounds/river:waterstream.mp3' type="audio/mpeg">
+                          </audio>
+
+                          <a href="" class="play-btn" id="btn4"></a>
+
+                          <div class="visible">
+                            <input type="range" id="volume4" min="0" max="1" step="0.1" value="1">
+                          </div>
+                      </li>
+
+                      <!-- Block 6 -->
+                    <li>
+                          <i class="icon-style5 fas fa-wind fa-3x" data-fa-transform="shrink-8" style="background: HoneyDew"></i>
+                          <audio id="audio5" loop>
+                              <source src='/nature sounds/wind.wav' type="audio/wav">
+                          </audio>
+
+                          <a href="" class="play-btn" id="btn5"></a>
+
+                          <div class="visible">
+                            <input type="range" id="volume5" min="0" max="1" step="0.1" value="1">
+                          </div>
+                      </li>
+                  </ul>
+                </div>
+              </nav>
+          <!-- End of the Left Menu -->
 
           <!-- The Center Image -->
           <div class="mini-slide" id="bus-img">
 
             <!-- The Left Icon -->
-               <div class="loader loader--style6">
+               <div class="loader " style="left: 6px;">
                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                    <rect x="0" y="13" width="4" height="5" fill="#5C764D">
@@ -629,10 +1098,10 @@
                 </div>
 
               <!-- The Caption -->
-              <p>Bus</p>
+              <p style="left: 9px;">Bus</p>
 
               <!-- The Right Icon -->
-              <div class="loader loader--style6">
+              <div class="loader" style="left: 6px;">
                 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
                   <rect x="0" y="13" width="4" height="5" fill="#5C764D">
@@ -665,7 +1134,7 @@
           </div>
         </div>
 
-    </div>
+
   </div>
 <!-- End of the Slides -->
 

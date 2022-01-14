@@ -3,72 +3,6 @@ body {
   min-height: 100vh;
 }
 
-/* The Navigation Bar Customization */
-.navbar {
-    position:fixed;
-    top: 0;
-    z-index:1;
-    display: flex;
-    width: 100%;
-    height: 40px;
-    opacity: 1.0;
-
-    right: 32px;
-    top: 90%;
-    transform: translateY(-10%);
-}
-
-.navbar ul {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: center;
-}
-
-.navbar ul li{
-    margin: 0 0.8rem;
-    padding: 1rem;
-}
-
-.navbar a {
-    /* The Dots */
-    display: block;
-    border-radius: 45%;
-    border: 1px transperant;
-    width: 8px;
-    height: 8px;
-
-    /* Spacing */
-    margin: 20px 0;
-
-    text-indent: -999px;
-    overflow: hidden;
-    position: relative;
-  }
-
-.navbar a::after {
-    content:"";
-
-    /* The Black Dot Fill */
-    background-color: #4f4f4f;
-
-    position: absolute;
-    bottom: 0;
-    height: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-
-    transition: height 0.3s ease;
-  }
-
-.navbar a:hover::after,
-.navbar a.active::after {
-  height: 100%;
-}
-
-/* End of the Navigation Bar Customization */
-
 /* The Sound Icon */
 .loader {
   height: 100px;
@@ -76,7 +10,7 @@ body {
   padding: 1em;
   line-height: 330px;
   position: relative;
-  right: 3px;
+  right: 4px;
 }
 
 
@@ -86,7 +20,6 @@ p {
   font-style: italic;
   line-height: 310px;
   position: relative;
-  right: 0px;
 }
 
 /* The Slideshow Slider Customization */
@@ -97,16 +30,19 @@ p {
   overflow: hidden;
 
   overflow-y:scroll;
-  scroll-snap-type: x mandatory;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
-  postion: relative;
+  position: relative;
 }
 
 /* The Background Image Customization */
 .slide {
+  scroll-snap-align: start;
   background-size: cover;
   position: relative;
   height: 100vh;
+  width: 100vw;
   opacity: 0.8;
   background-position: center;
   background-repeat: no-repeat;
@@ -132,94 +68,6 @@ p {
   margin: auto;
 }
 
-.slides {
-  display: flex;
-  overflow-x: auto;
- -webkit-overflow-scrolling: touch;
-  position: relative;
-}
-
-.slides > div {
-  scroll-snap-align: start;
-  flex-shrink: 0;
-  height: 100vh;
-  width: 100%;
-
-  transform-origin: center center;
-  transform: scale(1);
-  transition: transform 0.5s;
-  position: relative;
-
-  display: flex;
-}
-
-.slider > a {
-  display: inline-flex;
-  width: 1.5rem;
-  height: 1.5rem;
-  background: white;
-  text-decoration: none;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-}
-
-.slide > div:target {
-  transform: scale(0.8);
-}
-
-
-.mini-slide > div:target {
-  transform: scale(0.8);
-}
-
-.slideshow-slider > a:active {
-  top: 1px;
-}
-
-.slideshow-slider > a:focus {
-  background: #000;
-}
-
-@supports (scroll-snap-type) {
-  .slideshow-slider > a {
-    display: none;
-  }
-}
-
-.ui-slider-range-min {
-  height: 5px;
-  width: 300px;
-  position: absolute;
-  background: #2ecc71;
-  border: none;
-  border-radius: 10px;
-  outline: none;
-}
-
-.ui-slider-handle {
-  width: 20px;
-  height: 20px;
-  border-radius: 20px;
-  position: absolute;
-  margin-left: -8px;
-  margin-top: -3px;
-  cursor: pointer;
-  outline: none;
-}
-
-.ui-widget.ui-widget-content {
-    border: none;
-}
-
-.ui-slider .ui-slider-handle {
-    width: 0.9em;
-    height: 0.9em;
-  }
-
-  .ui-slider-horizontal .ui-slider-handle {
-      top: 0em;
-}
 
 /* End of the Slideshow Slider Customization */
 
@@ -275,38 +123,83 @@ p {
 }
 
 /* The Icons */
-.icon-style, .icon-style1, .icon-style2,
-.icon-style3, .icon-style4, .icon-style5 {
+.icons {
   font-size: 40px;
   height: 40px;
   position: absolute;
 }
 
-.icon-style {
+#icon-style {
   margin-left: 30px;
   margin-top: 5px;
 }
 
-.icon-style1 {
+#icon-style1 {
   margin-left: 30px;
   margin-top: 90px;
 }
 
-.icon-style2 {
-  margin-left: 33px;
+#icon-style2 {
+  margin-left: 34px;
   margin-top: 175px;
 }
-.icon-style3 {
+
+#icon-style3 {
   margin-left: 32px;
   margin-top: 260px;
 }
 
-.icon-style4 {
+#icon-style4 {
   margin-left: 30px;
   margin-top: 345px;
 }
 
-.icon-style5 {
+#icon-style5 {
+  margin-left: 33px;
+  margin-top: 430px;
+}
+
+#icon-style6 {
+  margin-left: 26px;
+  margin-top: 90px;
+}
+
+#icon-style7 {
+  margin-left: 26px;
+  margin-top: 175px;
+}
+
+#icon-style8 {
+  margin-left: 33px;
+  margin-top: 90px;
+}
+
+#icon-style9 {
+  margin-left: 37px;
+  margin-top: 260px;
+}
+
+#icon-style10 {
+  margin-left: 41px;
+  margin-top: 345px;
+}
+
+#icon-style11 {
+  margin-left: 38px;
+  margin-top: 430px;
+}
+
+#icon-style12 {
+  margin-left: 36px;
+  margin-top: 260px;
+}
+
+#icon-style13 {
+  margin-left: 37px;
+  margin-top: 345px;
+}
+
+#icon-style14 {
   margin-left: 33px;
   margin-top: 430px;
 }
@@ -322,7 +215,8 @@ p {
   left: 285px;
 }
 
-#volume {
+#volume, #volume6, #volume10,
+#volume16 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -336,7 +230,8 @@ p {
   margin-left: 400px;
 }
 
-#volume1 {
+#volume1, #volume7, #volume11,
+#volume17 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -349,7 +244,8 @@ p {
   margin-left: 400px;
 }
 
-#volume2 {
+#volume2, #volume8, #volume12,
+#volume18 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -362,7 +258,8 @@ p {
   margin-left: 400px;
 }
 
-#volume3 {
+#volume3, #volume9, #volume13,
+#volume19 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -375,7 +272,7 @@ p {
   margin-left: 400px;
 }
 
-#volume4 {
+#volume4, #volume14, #volume20 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -388,7 +285,7 @@ p {
   margin-left: 400px;
 }
 
-#volume5 {
+#volume5, #volume15, #volume21 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -403,6 +300,70 @@ p {
 
 /* End of the Volume Sliders */
 
+/* The Play Buttons */
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.play-btn {
+  /* Positioning */
+  position: absolute;
+  margin-left: -2px;
+  margin-top: -10px;
+  /* Sizing */
+  width: 20px;
+  height: 20px;
+  /* Border styling */
+  border-style: solid;
+  border-color: transparent HoneyDew transparent HoneyDew;
+  border-width: 10px 0 10px 20px;
+  bottom: 200px;
+}
+
+.play-btn.stop, .play-btn.to-play {
+  /* Animate morphing */
+  transition: transform 300ms cubic-bezier(0, 0, 0.2, 1), border-top-width 300ms cubic-bezier(0, 0, 0.2, 1), border-bottom-width 300ms cubic-bezier(0, 0, 0.2, 1);
+}
+
+.play-btn.stop {
+  /* Morph to a stop button */
+  transform: rotate(90deg);
+  border-width: 0 0 0 20px;
+}
+
+.play-btn.to-play {
+  /* Morph back from a stop button to a play button */
+  transform: rotate(180deg);
+  border-width: 10px 20px 10px 0;
+}
+
+#btn1, #btn7, #btn11,
+#btn17 {
+  bottom: 115px;
+}
+
+#btn2, #btn8, #btn12,
+#btn18 {
+  bottom: 30px;
+}
+
+#btn3, #btn9, #btn13,
+#btn19 {
+  bottom: -55px;
+}
+
+#btn4, #btn14, #btn20 {
+  bottom: -140px;
+}
+
+#btn5, #btn15, #btn21 {
+  bottom: -225px;
+}
+
+/* End of the Play Buttons */
+
 /* The Left Menu */
 #menuToggle {
   display: block;
@@ -411,6 +372,7 @@ p {
   left: 25px;
   z-index: 1;
   user-select: none;
+  width: 373px;
 }
 
 #menuToggle input {
@@ -450,7 +412,7 @@ p {
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
+  background: LightGray;
 }
 
 
@@ -465,8 +427,8 @@ p {
 
 #menu {
   position: relative;
-  width: 300px;
   height: 400px;
+  width: 300px;
   margin: -100px 0 0 -50px;
   padding: 50px;
   padding-top: 125px;
@@ -482,6 +444,7 @@ p {
   transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
 }
 
+
 #menu li {
   padding: 10px 0;
   font-size: 22px;
@@ -491,17 +454,29 @@ p {
   transform: none;
 }
 
+#fixing {
+  width: 253px;
+  -webkit-transform:translate3d(0,0,0);
+}
+
+#fix {
+  opacity: 0;
+  height: 20px;
+  width: 30px;
+}
+
+/* Opacity */
+#visible {
+  opacity: 100;
+}
+
 /* End of The Left Menu */
 
 /* The Right Menu */
-.container {
-  /* moves the everything left to right */
-  width: 60%;
-  user-select: none;
-}
-
-.navbar-right {
-  float: right;
+#navbar-right {
+  position: relative;
+  bottom: 320px;
+  left: 1330px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -514,36 +489,38 @@ a {
   color: LightGray;
 }
 
-#list {
+#list, #list1, #list2,
+#list3 {
   position: relative;
-  top: 1px;
-  /* moves icon left and right*/
-  left: 1120px;
 }
 
-.notepad {
+.notepad, .notepad1, .notepad2,
+.notepad3 {
   /* brings the box up and down */
   margin: 70px 0;
-  float: right;
+  position: relative;
+  bottom: 370px;
+  left: 1120px;
   background: #f1f1f1;
   /* changes the width of the box */
   width: 300px;
-  position: relative;
+
   border-radius: 3px;
   /* changes the height of the box */
   padding: 20px;
-  left: 245px;
-  display: none;
+  display:none;
+
 }
 
-.notepad:after {
-  bottom: 100%;
-  left: 89%;
+.notepad:after, .notepad1:after, .notepad2:after,
+.notepad3:after  {
+  bottom: 425px;
+  left: 95%;
   border: solid transparent;
   content: " ";
   height: 0;
   width: 0;
-  position: absolute;
+  position: relative;
   pointer-events: none;
   border-bottom-color: white;
   border-width: 8px;
@@ -561,7 +538,8 @@ a {
   color: #999;
 }
 
-.task-list {
+.task-list, .task-list1, .task-list2,
+.task-list3 {
   /* width of task list box */
   width: 265px;
   min-height: 310px;
@@ -574,14 +552,16 @@ a {
   left: -3px;
 }
 
-.task-list li {
+.task-list li, .task-list1 li, .task-list2 li,
+.task-list3 li {
   /* size of words */
   font-size: 1.2em;
   padding: 8px 0;
   overflow: hidden;
 }
 
-.task-list li span {
+.task-list li span, .task-list1 li span, .task-list2 li span,
+.task-list3 li span {
   width: 86%;
   white-space: nowrap;
   overflow: hidden;
@@ -589,7 +569,10 @@ a {
   float: left;
 }
 
-.task-list li .delete-button {
+.task-list li .delete-button,
+.task-list1 li .delete-button,
+.task-list2 li .delete-button,
+.task-list3 li .delete-button {
   position: relative;
   top: -6px;
   height: auto;
@@ -603,11 +586,15 @@ a {
   border: none;
 }
 
-.task-list li .delete-button:hover {
+.task-list li .delete-button:hover,
+.task-list1 li .delete-button:hover,
+.task-list2 li .delete-button:hover,
+.task-list3 li .delete-button:hover {
   opacity: 0.85;
 }
 
-.add-new-task {
+.add-new-task, .add-new-task1, .add-new-task2,
+.add-new-task3 {
   /* brings both boxes up and down */
   margin-top: 5px;
   padding-bottom: 60px;
@@ -617,7 +604,10 @@ a {
   width: 265px;
 }
 
-.add-new-task input[type="text"] {
+.add-new-task input[type="text"],
+.add-new-task1 input[type="text"],
+.add-new-task2 input[type="text"],
+.add-new-task3 input[type="text"] {
   width: 100%;
   font: normal 1.2em "Open Sans", Arial, sans-serif;
   color: #999;
@@ -635,78 +625,3 @@ a {
 }
 
 /* End of the Task List */
-
-/* The Play Button */
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-.play-btn {
-  /* Positioning */
-  position: absolute;
-  margin-left: -2px;
-  margin-top: -10px;
-  /* Sizing */
-  width: 20px;
-  height: 20px;
-  /* Border styling */
-  border-style: solid;
-  border-color: transparent HoneyDew transparent HoneyDew;
-  border-width: 10px 0 10px 20px;
-  bottom: 200px;
-}
-
-.play-btn.stop, .play-btn.to-play {
-  /* Animate morphing */
-  transition: transform 300ms cubic-bezier(0, 0, 0.2, 1), border-top-width 300ms cubic-bezier(0, 0, 0.2, 1), border-bottom-width 300ms cubic-bezier(0, 0, 0.2, 1);
-}
-
-.play-btn.stop {
-  /* Morph to a stop button */
-  transform: rotate(90deg);
-  border-width: 0 0 0 20px;
-}
-
-.play-btn.to-play {
-  /* Morph back from a stop button to a play button */
-  transform: rotate(180deg);
-  border-width: 10px 20px 10px 0;
-}
-
-#btn1 {
-  bottom: 115px;
-}
-
-#btn2 {
-  bottom: 30px;
-}
-
-#btn3 {
-  bottom: -55px;
-}
-
-#btn4 {
-  bottom: -140px;
-}
-
-#btn5 {
-  bottom: -225px;
-}
-
-/* End of the Play Button */
-
-/* Opacity */
-#visible {
-  opacity: 100;
-}
-
-#invisible {
-  opacity: 0;
-}
-
-@viewport {
-  width: device-width ;
-  zoom: 1.0 ;
-}
