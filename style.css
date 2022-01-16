@@ -190,20 +190,54 @@ p {
 }
 
 #icon-style12 {
-  margin-left: 36px;
+  margin-left: 35px;
   margin-top: 260px;
 }
 
 #icon-style13 {
-  margin-left: 37px;
+  margin-left: 35px;
   margin-top: 345px;
 }
 
 #icon-style14 {
-  margin-left: 33px;
+  margin-left: 32px;
+  margin-top: 5px;
+}
+
+#icon-style15 {
+  margin-left: 37px;
+  margin-top: 260px;
+}
+
+#icon-style16 {
+  margin-left: 32px;
+  margin-top: 5px;
+}
+
+#icon-style17 {
+  margin-left: 32px;
   margin-top: 430px;
 }
 
+#icon-style18 {
+  margin-left: 39px;
+  margin-top: 90px;
+}
+
+#icon-style19 {
+  margin-left: 38px;
+  margin-top: 260px;
+}
+
+#icon-style20 {
+  margin-left: 42px;
+  margin-top: 345px;
+}
+
+#icon-style21 {
+  margin-left: 34px;
+  margin-top: 430px;
+}
 /* The Volume Sliders */
 #player {
   /* moves all the sliders left and right */
@@ -216,7 +250,7 @@ p {
 }
 
 #volume, #volume6, #volume10,
-#volume16 {
+#volume16, #volume22, #volume26 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -231,7 +265,7 @@ p {
 }
 
 #volume1, #volume7, #volume11,
-#volume17 {
+#volume17, #volume23, #volume27 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -245,7 +279,7 @@ p {
 }
 
 #volume2, #volume8, #volume12,
-#volume18 {
+#volume18, #volume24, #volume28 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -259,7 +293,7 @@ p {
 }
 
 #volume3, #volume9, #volume13,
-#volume19 {
+#volume19, #volume25, #volume29 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -272,7 +306,8 @@ p {
   margin-left: 400px;
 }
 
-#volume4, #volume14, #volume20 {
+#volume4, #volume14, #volume20,
+#volume30 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -285,7 +320,8 @@ p {
   margin-left: 400px;
 }
 
-#volume5, #volume15, #volume21 {
+#volume5, #volume15, #volume21,
+#volume31 {
   position: absolute;
   left: -315px;
   margin: 0 auto;
@@ -340,25 +376,27 @@ p {
 }
 
 #btn1, #btn7, #btn11,
-#btn17 {
+#btn17, #btn23, #btn27 {
   bottom: 115px;
 }
 
 #btn2, #btn8, #btn12,
-#btn18 {
+#btn18, #btn24, #btn28 {
   bottom: 30px;
 }
 
 #btn3, #btn9, #btn13,
-#btn19 {
+#btn19, #btn25, #btn29 {
   bottom: -55px;
 }
 
-#btn4, #btn14, #btn20 {
+#btn4, #btn14, #btn20,
+#btn30 {
   bottom: -140px;
 }
 
-#btn5, #btn15, #btn21 {
+#btn5, #btn15, #btn21,
+#btn31 {
   bottom: -225px;
 }
 
@@ -490,12 +528,12 @@ a {
 }
 
 #list, #list1, #list2,
-#list3 {
+#list3, #list4, #list5 {
   position: relative;
 }
 
 .notepad, .notepad1, .notepad2,
-.notepad3 {
+.notepad3, .notepad4, .notepad5 {
   /* brings the box up and down */
   margin: 70px 0;
   position: relative;
@@ -513,7 +551,7 @@ a {
 }
 
 .notepad:after, .notepad1:after, .notepad2:after,
-.notepad3:after  {
+.notepad3:after, .notepad4:after, .notepad5:after {
   bottom: 425px;
   left: 95%;
   border: solid transparent;
@@ -539,7 +577,7 @@ a {
 }
 
 .task-list, .task-list1, .task-list2,
-.task-list3 {
+.task-list3, .task-list4, .task-list5 {
   /* width of task list box */
   width: 265px;
   min-height: 310px;
@@ -553,7 +591,7 @@ a {
 }
 
 .task-list li, .task-list1 li, .task-list2 li,
-.task-list3 li {
+.task-list3 li, .task-list4 li, .task-list5 li {
   /* size of words */
   font-size: 1.2em;
   padding: 8px 0;
@@ -561,7 +599,7 @@ a {
 }
 
 .task-list li span, .task-list1 li span, .task-list2 li span,
-.task-list3 li span {
+.task-list3 li span, .task-list4 li span, .task-list5 li span {
   width: 86%;
   white-space: nowrap;
   overflow: hidden;
@@ -572,7 +610,9 @@ a {
 .task-list li .delete-button,
 .task-list1 li .delete-button,
 .task-list2 li .delete-button,
-.task-list3 li .delete-button {
+.task-list3 li .delete-button,
+.task-list4 li .delete-button,
+.task-list5 li .delete-button {
   position: relative;
   top: -6px;
   height: auto;
@@ -589,12 +629,14 @@ a {
 .task-list li .delete-button:hover,
 .task-list1 li .delete-button:hover,
 .task-list2 li .delete-button:hover,
-.task-list3 li .delete-button:hover {
+.task-list3 li .delete-button:hover,
+.task-list4 li .delete-button:hover,
+.task-list5 li .delete-button:hover {
   opacity: 0.85;
 }
 
 .add-new-task, .add-new-task1, .add-new-task2,
-.add-new-task3 {
+.add-new-task3, .add-new-task4, .add-new-task5 {
   /* brings both boxes up and down */
   margin-top: 5px;
   padding-bottom: 60px;
@@ -607,7 +649,9 @@ a {
 .add-new-task input[type="text"],
 .add-new-task1 input[type="text"],
 .add-new-task2 input[type="text"],
-.add-new-task3 input[type="text"] {
+.add-new-task3 input[type="text"],
+.add-new-task4 input[type="text"],
+.add-new-task5 input[type="text"] {
   width: 100%;
   font: normal 1.2em "Open Sans", Arial, sans-serif;
   color: #999;

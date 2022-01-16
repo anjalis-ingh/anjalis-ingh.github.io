@@ -200,6 +200,96 @@ $(document).ready(function() {
         }
     });
 
+    $("#btn22").on("click", function (e) {
+        var audio = $("#audio22")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn23").on("click", function (e) {
+        var audio = $("#audio23")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn24").on("click", function (e) {
+        var audio = $("#audio24")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn25").on("click", function (e) {
+        var audio = $("#audio25")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn26").on("click", function (e) {
+        var audio = $("#audio26")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn27").on("click", function (e) {
+        var audio = $("#audio27")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn28").on("click", function (e) {
+        var audio = $("#audio28")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn29").on("click", function (e) {
+        var audio = $("#audio29")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn30").on("click", function (e) {
+        var audio = $("#audio30")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
+    $("#btn31").on("click", function (e) {
+        var audio = $("#audio31")[0];
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+
     // End of Player Buttons
 
     // Volume Bars
@@ -313,6 +403,55 @@ $(document).ready(function() {
         audio.volume = $(this).val();
     });
 
+    $("#volume22").on("change input", function () {
+        var audio  =  $("#audio22")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume23").on("change input", function () {
+        var audio  =  $("#audio23")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume24").on("change input", function () {
+        var audio  =  $("#audio24")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume25").on("change input", function () {
+        var audio  =  $("#audio25")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume26").on("change input", function () {
+        var audio  =  $("#audio26")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume27").on("change input", function () {
+        var audio  =  $("#audio27")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume28").on("change input", function () {
+        var audio  =  $("#audio28")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume29").on("change input", function () {
+        var audio  =  $("#audio29")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume30").on("change input", function () {
+        var audio  =  $("#audio30")[0];
+        audio.volume = $(this).val();
+    });
+
+    $("#volume31").on("change input", function () {
+        var audio  =  $("#audio31")[0];
+        audio.volume = $(this).val();
+    });
 
     // End of the Volume Bars
 
@@ -364,6 +503,14 @@ $(document).ready(function() {
 
     $("#list3").on("click", function() {
       $(".notepad3").fadeToggle( "fast");
+    });
+
+    $("#list4").on("click", function() {
+      $(".notepad4").fadeToggle( "fast");
+    });
+
+    $("#list5").on("click", function() {
+      $(".notepad5").fadeToggle( "fast");
     });
 
   })();
@@ -484,6 +631,71 @@ function add_task() {
     if(new_task !== ''){
       $('.add-new-task3 input[name=new-task3]').val('');
       $(print).appendTo('.task-list3 ul').hide().fadeIn();
+      delete_task();
+    }
+    return false;
+  });
+}
+
+function delete_task() {
+  $('.delete-button').click(function(){
+    var current_element = $(this);
+    var id = $(this).attr('id');
+    current_element.parent().fadeOut("fast", function() { $(this).remove(); });
+  });
+}
+
+
+// Task List 4
+
+var count = 5;
+
+add_task();
+delete_task();
+
+function add_task() {
+
+  $(document).on('submit', '.add-new-task4', function(){
+    var new_task = $('.add-new-task4 input[name=new-task4]').val();
+    count = count + 1;
+
+    var print = '<li><span>' + new_task + '</span><button id="' + count + '" class="delete-button">X</button></li>';
+
+    if(new_task !== ''){
+      $('.add-new-task4 input[name=new-task4]').val('');
+      $(print).appendTo('.task-list4 ul').hide().fadeIn();
+      delete_task();
+    }
+    return false;
+  });
+}
+
+function delete_task() {
+  $('.delete-button').click(function(){
+    var current_element = $(this);
+    var id = $(this).attr('id');
+    current_element.parent().fadeOut("fast", function() { $(this).remove(); });
+  });
+}
+
+// Task List 5
+
+var count = 5;
+
+add_task();
+delete_task();
+
+function add_task() {
+
+  $(document).on('submit', '.add-new-task5', function(){
+    var new_task = $('.add-new-task5 input[name=new-task5]').val();
+    count = count + 1;
+
+    var print = '<li><span>' + new_task + '</span><button id="' + count + '" class="delete-button">X</button></li>';
+
+    if(new_task !== ''){
+      $('.add-new-task5 input[name=new-task5]').val('');
+      $(print).appendTo('.task-list5 ul').hide().fadeIn();
       delete_task();
     }
     return false;
