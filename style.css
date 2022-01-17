@@ -512,9 +512,6 @@ p {
 
 /* The Right Menu */
 #navbar-right {
-  position: relative;
-  bottom: 320px;
-  left: 1330px;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -529,24 +526,32 @@ a {
 
 #list, #list1, #list2,
 #list3, #list4, #list5 {
+  position: absolute;
+  top: 2.1%;
+  left: 96%;
+}
+
+/* End of the Right Menu */
+
+/* The Task List */
+.positioning {
   position: relative;
+  width: 20vw;
+  height: 40vh;
 }
 
 .notepad, .notepad1, .notepad2,
 .notepad3, .notepad4, .notepad5 {
-  /* brings the box up and down */
-  margin: 70px 0;
-  position: relative;
-  bottom: 370px;
-  left: 1120px;
+  position: absolute;
+  top: 9%;
+  right: 1%;
   background: #f1f1f1;
   /* changes the width of the box */
   width: 300px;
-
   border-radius: 3px;
   /* changes the height of the box */
   padding: 20px;
-  display:none;
+  display: none;
 
 }
 
@@ -565,9 +570,6 @@ a {
   margin-left: -8px;
 }
 
-/* End of the Right Menu */
-
-/* The Task List */
 .wrap {
   /* width of the both boxes */
   width: 280px;
