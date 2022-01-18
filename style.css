@@ -427,7 +427,7 @@ p {
   margin-bottom: 5px;
   position: relative;
 
-  background: LightGray;
+  background: #fffcfc;
   border-radius: 3px;
 
   z-index: 1;
@@ -511,6 +511,13 @@ p {
 /* End of The Left Menu */
 
 /* The Right Menu */
+#positioning {
+  position: fixed;
+  top: -2px;
+  right: 26px;
+  z-index: 1;
+}
+
 #navbar-right {
   -webkit-font-smoothing: antialiased;
 }
@@ -521,30 +528,15 @@ li {
 
 a {
   /* color of the icon */
-  color: LightGray;
-}
-
-#list, #list1, #list2,
-#list3, #list4, #list5 {
-  position: absolute;
-  top: 2.1%;
-  left: 96%;
+  color: #fffcfc;
 }
 
 /* End of the Right Menu */
 
 /* The Task List */
-.positioning {
-  position: relative;
-  width: 20vw;
-  height: 40vh;
-}
-
-.notepad, .notepad1, .notepad2,
-.notepad3, .notepad4, .notepad5 {
+.notepad {
   position: absolute;
-  top: 9%;
-  right: 1%;
+  right: -16px;
   background: #f1f1f1;
   /* changes the width of the box */
   width: 300px;
@@ -555,8 +547,7 @@ a {
 
 }
 
-.notepad:after, .notepad1:after, .notepad2:after,
-.notepad3:after, .notepad4:after, .notepad5:after {
+.notepad:after {
   bottom: 425px;
   left: 95%;
   border: solid transparent;
@@ -578,8 +569,7 @@ a {
   color: #999;
 }
 
-.task-list, .task-list1, .task-list2,
-.task-list3, .task-list4, .task-list5 {
+.task-list {
   /* width of task list box */
   width: 265px;
   min-height: 310px;
@@ -592,16 +582,14 @@ a {
   left: -3px;
 }
 
-.task-list li, .task-list1 li, .task-list2 li,
-.task-list3 li, .task-list4 li, .task-list5 li {
+.task-list li {
   /* size of words */
   font-size: 1.2em;
   padding: 8px 0;
   overflow: hidden;
 }
 
-.task-list li span, .task-list1 li span, .task-list2 li span,
-.task-list3 li span, .task-list4 li span, .task-list5 li span {
+.task-list li span {
   width: 86%;
   white-space: nowrap;
   overflow: hidden;
@@ -609,12 +597,7 @@ a {
   float: left;
 }
 
-.task-list li .delete-button,
-.task-list1 li .delete-button,
-.task-list2 li .delete-button,
-.task-list3 li .delete-button,
-.task-list4 li .delete-button,
-.task-list5 li .delete-button {
+.task-list li .delete-button {
   position: relative;
   top: -6px;
   height: auto;
@@ -628,17 +611,11 @@ a {
   border: none;
 }
 
-.task-list li .delete-button:hover,
-.task-list1 li .delete-button:hover,
-.task-list2 li .delete-button:hover,
-.task-list3 li .delete-button:hover,
-.task-list4 li .delete-button:hover,
-.task-list5 li .delete-button:hover {
+.task-list li .delete-button:hover {
   opacity: 0.85;
 }
 
-.add-new-task, .add-new-task1, .add-new-task2,
-.add-new-task3, .add-new-task4, .add-new-task5 {
+.add-new-task {
   /* brings both boxes up and down */
   margin-top: 5px;
   padding-bottom: 60px;
@@ -648,12 +625,7 @@ a {
   width: 265px;
 }
 
-.add-new-task input[type="text"],
-.add-new-task1 input[type="text"],
-.add-new-task2 input[type="text"],
-.add-new-task3 input[type="text"],
-.add-new-task4 input[type="text"],
-.add-new-task5 input[type="text"] {
+.add-new-task input[type="text"] {
   width: 100%;
   font: normal 1.2em "Open Sans", Arial, sans-serif;
   color: #999;
