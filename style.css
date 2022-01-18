@@ -513,7 +513,7 @@ p {
 /* The Right Menu */
 #positioning {
   position: fixed;
-  top: -2px;
+  top: 2px;
   right: 26px;
   z-index: 1;
 }
