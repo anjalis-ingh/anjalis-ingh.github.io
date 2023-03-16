@@ -31,4 +31,15 @@ Built using HTML, CSS, and JavaScript
 
 * Minimal task list that displays user's tasks and removes them 
 
+# Virtual Spaces
+Nature             |  Park
+:-------------------------:|:-------------------------:
+<img width="600" src="https://user-images.githubusercontent.com/96373072/225744155-1f23a63a-b727-4dd3-9088-080c91161415.png">  | <img width="600" src="https://user-images.githubusercontent.com/96373072/225744345-2a0050fb-b07e-4ae3-8ad1-fb996a14f492.png">
 
+Cafe             |  Library
+:-------------------------:|:-------------------------:
+<img width="600" src="https://user-images.githubusercontent.com/96373072/225744355-f6dd8d40-81a4-4d3d-bad2-1ed9ae5af42e.png">  |  <img width="600" src="https://user-images.githubusercontent.com/96373072/225744381-d86ef090-9120-4394-bf9d-8d241b0738a5.png">
+
+Home             |  Bus
+:-------------------------:|:-------------------------:
+<img width="600" src="https://user-images.githubusercontent.com/96373072/225744392-129030ed-12d1-4b15-a5f1-68da9ea10cb8.png">  | <img width="600" src="https://user-images.githubusercontent.com/96373072/225744410-da3efab4-960b-47bb-bef6-6827d04f6069.png">
