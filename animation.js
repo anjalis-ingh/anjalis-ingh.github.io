@@ -35,7 +35,6 @@ $(document).ready(function () {
   
      if (!window.AnimationEvent) { return; }
     var anchors = document.getElementsByTagName('a');
-     /*var anchors = document.getElementsByClassName('content');*/
       
       for (var idx=0; idx<anchors.length; idx+=1) {
         if (anchors[idx].hostname !== window.location.hostname ||
@@ -58,9 +57,6 @@ $(document).ready(function () {
           });
       }
   });
-  
-  
-  
   
   window.addEventListener('pageshow', function (event) {
     if (!event.persisted) {
