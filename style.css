@@ -327,6 +327,13 @@ p.pn1 {
     margin-left: 133px;
 }
 
+p.pn2 {
+	font-size: 35px;
+    margin-top: 78%;
+    margin-bottom: -81px;
+    margin-left: 150px;
+}
+
 p.CTAtext {
 	font-size: 15px;
 	text-decoration: none;
@@ -657,6 +664,26 @@ nav {
     position: absolute;
     left: 135px;
     bottom: -126px;
+}
+
+#green-hearts {
+	background-image: url(assets/green-hearts.svg);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 100%;
+    position: absolute;
+    top: 491px;
+    left: 342px;
+}
+
+#green-underline {
+	background-image: url(assets/green-underline.svg);
+    background-repeat: no-repeat;
+    width: 142px;
+    height: 247px;
+    position: absolute;
+    left: 236px;
+    bottom: -154px;
 }
 
 #pink-underline {
@@ -1571,7 +1598,7 @@ p.Hello {
 	font-size: 40px;
 }
 
-p.pn1, p.pn0 {
+p.pn2, p.pn1, p.pn0 {
 	margin-bottom: 5px;
 }
 
@@ -1793,8 +1820,12 @@ p.aDesc{
 	background-image: url(assets/blue\ window\ \(tall\)-cropped.svg);
 }
 
-#red {
+#pink {
 	background-image: url(assets/red\ window-cropped.svg);
+}
+
+#yellow {
+	background-image: url(assets/yellow\ window-cropped.svg);
 }
 
 #straight-line {
@@ -1885,7 +1916,6 @@ p.aDesc{
 .c1 {
 	flex:0 0 660px;
 }
-
 
 .c2 {
 	flex:0 0 660px;
@@ -2065,8 +2095,6 @@ p.aDesc{
 	float: right;
 }
 
-
-
 }
 
 
@@ -2103,7 +2131,7 @@ p.aDesc{
 }
 
 @media only screen and (max-height: 400px){
-	p.pn1, p.pn0 {
+	p.pn2, p.pn1, p.pn0 {
 		margin-top: -5px;
 	}
 	p.Hello{
@@ -2163,7 +2191,7 @@ p.aDesc{
 
 
 @media only screen and (max-height: 1000px){
-	p.pn1, p.pn0{
+	p.pn2, p.pn1, p.pn0{
 		font-size: 38px;
 	}
 
