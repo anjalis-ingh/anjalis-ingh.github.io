@@ -112,10 +112,6 @@ body {
 	font-size: 20px;
 }
 
-.tt3 {
-	font-size:24px;
-}
-
 .tooltip .tooltiptext {
 	font-family: 'HeadingNow';
 	font-size: 12px;
@@ -319,19 +315,6 @@ p.pn2 {
 	color:var(--A_typeline);
 }
 
-.textcontent {
-	border: 1px solid var(--H_typeline);
-	background-color: #3A8AD7;
-}
-
-.dot {
-  height: 25px;
-  width: 25px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-}
-
 .locator {
 	text-decoration: none;
 	border-top: 1px solid var(--H_lineDark);
@@ -460,14 +443,6 @@ header {
 .bar3 {
   -webkit-transform: rotate(45deg) translate(-1px,-3px);
   transform: rotate(45deg) translate(-1px, -3px);
-}
-
-.notif {
-	display:none;
-}
-
-.notif {
-	display: block;
 }
 
 .navContainer {
@@ -681,25 +656,6 @@ nav {
 	top: 40px;
 }	
 
-.content {
-	position: relative;
-	cursor:pointer;
-	display: block;
-	width: 100%;
-	overflow-wrap: normal;
-	padding-left: 38px;
-	padding-top: 30px;
-	margin-bottom: -52px;
-    border-top: 5px solid var(--H_bkg);
-    overflow: hidden;
-    color: var(--H_typeline);
-    text-decoration: none;
-}
-
-.content:hover {
-	border-top: 5px solid var(--H_typeline);
-}
-
 .descrip {
 	display: flex;
 	flex-direction:row;
@@ -728,24 +684,10 @@ a {
 	color: var(--H_typeline);
 }
 
-p.aDesc {
-	font-size: 20px;
-	margin: 0;
-	margin-right: 50px;
-}
-
-.leftFloat {
-	display: inline-block;
-}
-
 .b4 {	
 	font-family: 'HeadingNow';
 	font-size: 12px;
 	color: var(--H_typeDark);
-}
-
-.experience {
-	margin-bottom: 70px;
 }
 
 .content2 {
@@ -758,40 +700,6 @@ p.aDesc {
 
 .spacer {
 	padding-bottom: 150px;
-}
-
-@media only screen and (max-width: 700px) {
-	.expHeader{
-	padding-left: 30px;
-}
-.allExperiments {
-	padding-bottom: 100px;
-	margin-left: 0;
-	margin-right: 0;
-	width: calc(100vw - 30px);
-}
-.expCol1 {
-	margin-left: 15px;
-	float:none;
-	width:100%;
-	padding-bottom: 0;
-}
-
-.expCol2 {
-	margin-left: 15px;
-	float:none;
-	width: 100%;
-}
-
-#headshot {
-	width: 50%;
-}
-
-.hidehide{
-	display: none;
-}
-
-
 }
 
 /* MOBILE */
@@ -851,7 +759,6 @@ padding-top: 0px;
 	text-align: left;
 }
 
-
 .navitem {
 	font-size: 30px;
 	padding-top: 100px;
@@ -894,11 +801,6 @@ padding-top: 0px;
 	height: 90px;
 }
 
-.mobiletool {
-	display:inline-block;
-	position: static;
-}
-
 .socialMobile {
 	padding-left:10px;
 	display: inline-block;
@@ -930,27 +832,6 @@ p.pn2, p.pn1, p.pn0 {
 	margin-bottom: 5px;
 }
 
-.pHeadNumber {
-	padding:0;
-}
-
-.nextPage {
-	padding-left:15px;
-	border-left: 0;
-}
-
-#headshot {
-	width: 100%;
-}
-
-.topCreds {
-	margin-top: -120px;
-}
-
-p.aDesc{
-	margin-right: 10px;
-}
-
 .b4 {
 	display: inline-block;
 }
@@ -962,31 +843,6 @@ p.aDesc{
 	margin-left: 20px;
 }
 
-}
-@media only screen and (min-width: 1000px){
-	.credsColumn {
-		float: left;
-	}
-
-	.credsRight {
-		width: 60%;
-		padding-left: 10%;
-	}
-}
-
-@media only screen and (min-width: 700px){
-	.credsLeft {
-		width:30%;
-	}
-
-	.credsColumn {
-		float: left;
-	}
-
-	.credsRight{
-		width: 60%;
-		padding-left: 5%;
-	}
 }
 
 /* Desktop */
@@ -1303,16 +1159,14 @@ p.aDesc{
 	cursor:pointer;
 }
 
-
 }
-
 
 @media only screen and (max-height: 350px) {
-		.pskills {
-			display:none;}
+	.pskills {
+		display:none;}
 }
 
-@media only screen and (max-height: 400px){
+@media only screen and (max-height: 400px) {
 	p.pn2, p.pn1, p.pn0 {
 		margin-top: -5px;
 	}
@@ -1326,41 +1180,39 @@ p.aDesc{
 }
 
 
-@media only screen and (max-height: 550px){
-		.imgContainer {
-			visibility:hidden;
-		}
+@media only screen and (max-height: 550px) {
+	.imgContainer {
+		visibility:hidden;
+	}
 }
 
-@media only screen and (max-height: 650px){
-		.stack4{
-			display:none;
-		}
-		.stack2 {
-			display: none;
-		}
-		.stack6 {
-			display: none;
-		}
-		.socialStack{
-			display:none;
-		}
-		.credit {
-			display:none;
-		}
-
-		.stack1{
-			margin-top: -15px;
-		}
+@media only screen and (max-height: 650px) {
+	.stack4{
+		display:none;
+	}
+	.stack2 {
+		display: none;
+	}
+	.stack6 {
+		display: none;
+	}
+	.socialStack{
+		display:none;
+	}
+	.credit {
+		display:none;
 	}
 
-
+	.stack1{
+		margin-top: -15px;
+	}
 }
 
+
+}
 
 @media only screen and (max-height: 1000px){
 	p.pn2, p.pn1, p.pn0{
 		font-size: 38px;
 	}
-
 }
