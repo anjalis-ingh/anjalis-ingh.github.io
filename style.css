@@ -504,8 +504,8 @@ nav {
     width: 250px;
     height: 230px;
     position: absolute;
-    left: 50px;
-    bottom: -125px;
+    left: 49px;
+    bottom: -123px;
 }
 
 #squiggly-arrow {
@@ -514,7 +514,7 @@ nav {
     width: 62px;
     height: 62px;
     position: absolute;
-    left: 355px;
+    left: 360px;
     bottom: 247px;
 }
 
@@ -534,7 +534,7 @@ nav {
 	width: 27px;
     height: 62px;
     position: absolute;
-    left: 338px;
+    left: 341px;
     bottom: 48px;
 }
 
@@ -554,8 +554,8 @@ nav {
     width: 58px;
     height: 45px;
     position: absolute;
-    left: 135px;
-    bottom: 84px;
+    left: 136px;
+    bottom: 62px;
 }
 
 #green-hearts {
@@ -565,7 +565,7 @@ nav {
     height: 8%;
     position: absolute;
     top: 491px;
-    left: 342px;
+    left: 348px;
 }
 
 #green-underline {
@@ -575,7 +575,7 @@ nav {
     height: 27px;
     position: absolute;
     left: 236px;
-    bottom: 60px;
+    bottom: 79px;
 }
 
 #pink-underline {
@@ -585,7 +585,7 @@ nav {
     height: 37px;
     position: absolute;
     left: 348px;
-    bottom: 75px;
+    bottom: 58px;
 }
 
 #purple-sparkle {
