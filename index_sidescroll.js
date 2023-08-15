@@ -1,5 +1,4 @@
 // Js for side scroll on Homepage
-// get array of pane objects 
 
 var endStart = document.getElementById('endStart') // last panel of first round
 var endLast = document.getElementById('endLast')
@@ -8,38 +7,36 @@ var begStar = endStart.getBoundingClientRect().right; // position at the end of 
 var lastEnd = endLast.getBoundingClientRect().right; // position at the end of 2nd round
 
 window.onscroll = function () {
+  if (window.matchMedia ("(min-width: 480px)").matches) {
+      // Horizontal Scroll
+      var y = document.body.getBoundingClientRect().top;
+      page.scrollLeft = -y;
 
-        if(window.matchMedia ("(min-width: 480px)").matches){
-            // Horizontal Scroll
-            var y = document.body.getBoundingClientRect().top;
-            page.scrollLeft = -y;
-            // expRow.scrollLeft= -y;
-            // document.getElementById('variables').innerHTML = window.scrollY;
-            var barP = scrollY / begStar;
-            var barPosition = barP * window.innerWidth;
+      var barP = scrollY / begStar;
+      var barPosition = barP * window.innerWidth;
 
-            var barP2 = (scrollY - begStar) / begStar;
-            var bar2Position = barP2 * window.innerWidth;
+      var barP2 = (scrollY - begStar) / begStar;
+      var bar2Position = barP2 * window.innerWidth;
 
-            document.getElementById("moveBar").style.marginLeft = barPosition + "px";
-            document.getElementById("moveBar2").style.marginLeft = bar2Position + "px";
+      document.getElementById("moveBar").style.marginLeft = barPosition + "px";
+      document.getElementById("moveBar2").style.marginLeft = bar2Position + "px";
 
-              // Looping Scroll
-              // Find new locations based on window width
-              var begEnd = lastEnd - window.innerWidth;
-              var returnMid = begStar - window.innerWidth;
+        // Looping Scroll
+        // Find new locations based on window width
+        var begEnd = lastEnd - window.innerWidth;
+        var returnMid = begStar - window.innerWidth;
 
-              // if at 0 position and scroll up
-              if (window.scrollY == 0) {
-                window.scrollTo(0,begStar);
-              }
-              // if at beginning of the last pane
-              else if (window.scrollY == begEnd) {
-                window.scrollTo(0, returnMid);
-              }
-          }
+        // if at 0 position and scroll up
+        if (window.scrollY == 0) {
+          window.scrollTo(0,begStar);
+        }
+        // if at beginning of the last pane
+        else if (window.scrollY == begEnd) {
+          window.scrollTo(0, returnMid);
+        }
+    }
 
-          }
+}
           
 // Adjust the body height if the window resizes.
 window.onresize = resize;
@@ -49,19 +46,20 @@ resize();
 
 // Reset window-based vars
 function resize() {
-            var w = page.scrollWidth-window.innerWidth+window.innerHeight;
-            document.body.style.height = w + 'px';
-            var inwidth = window.innerWidth * window.innerWidth
-            var barwidth = inwidth / begStar;
-            document.getElementById("moveBar").style.width = barwidth + "px";
-            document.getElementById("moveBar2").style.width = barwidth + "px";
-          }
+  var w = page.scrollWidth-window.innerWidth+window.innerHeight;
+  document.body.style.height = w + 'px';
+  var inwidth = window.innerWidth * window.innerWidth
+  var barwidth = inwidth / begStar;
+  document.getElementById("moveBar").style.width = barwidth + "px";
+  document.getElementById("moveBar2").style.width = barwidth + "px";
+}
 
 function mobileNav() {
   var x = document.getElementById("responsivenav");
   if (x.className === "topnav-right") {
     x.className += " responsive";
-  } else {
+  } 
+  else {
     x.className = "topnav-right";
   }
 }
@@ -77,7 +75,8 @@ function dragElement(elmnt) {
   if (document.getElementById(elmnt.id + "header")) {
     /* if present, the header is where you move the DIV from:*/
     document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
-  } else {
+  } 
+  else {
     /* otherwise, move the DIV from anywhere inside the DIV:*/
     elmnt.onmousedown = dragMouseDown;
   }
@@ -112,16 +111,12 @@ function dragElement(elmnt) {
 $(function(){
     $('.img_wrap').on( 'mouseover', function() {
       $( this ).find( '.imgContainer').toggleClass('animated', 'static');
-
-      /*   $('.img_wrap .imgContainer').toggleClass('animated', 'static');*/
     })
 })
 
 $(function(){
     $('.img_wrap').on( 'mouseout', function() {
       $( this ).find( '.imgContainer').toggleClass('animated', 'static');
-
-      /*   $('.img_wrap .imgContainer').toggleClass('animated', 'static');*/
     })
 })
 
@@ -138,7 +133,7 @@ function copyDivToClipboard() {
 
   tooltip.innerHTML = "🥳 Copied! TTYS! ";
   tooltip2.innerHTML = "🥳 Copied! TTYS! ";
-                }
+}
 
 
 function outFunc() {
@@ -149,15 +144,13 @@ function outFunc() {
 }
 
 function fadeInPage() {
-
-      if (!window.AnimationEvent) { return; }
-          var fader = document.getElementById('fader');
-    fader.classList.add('fade-out');
+  if (!window.AnimationEvent) { return; }
+      var fader = document.getElementById('fader');
+  fader.classList.add('fade-out');
 }
 
 
 document.addEventListener('DOMContentLoaded', function() {
-
    if (!window.AnimationEvent) { return; }
    var anchors = document.getElementsByTagName('a');
     
