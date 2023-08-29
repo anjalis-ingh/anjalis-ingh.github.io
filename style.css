@@ -233,10 +233,9 @@ p.b5 {
 p.pn0 {
 	font-family: 'Public Sans', sans-serif;
     font-weight: 500;
-    font-size: 35px;
     position: absolute;
-    margin-left: 126px;
-    bottom: 248px;
+    margin-left: 132px;
+    bottom: 252.5px;
 }
 
 p.pn3 {
@@ -278,14 +277,19 @@ p.pn91 {
 }
 
 p.pn1 {
-	font-size: 35px;
     margin-top: 78%;
     margin-bottom: -81px;
     margin-left: 133px;
 }
 
-p.pn2 {
+p.pn30 {
 	font-size: 35px;
+    margin-top: 78%;
+    margin-bottom: -81px;
+    margin-left: 33px;
+}
+
+p.pn2 {
     margin-top: 78%;
     margin-bottom: -81px;
     margin-left: 150px;
@@ -514,7 +518,7 @@ nav {
     width: 62px;
     height: 62px;
     position: absolute;
-    left: 360px;
+    left: 343px;
     bottom: 247px;
 }
 
@@ -564,8 +568,28 @@ nav {
     width: 40px;
     height: 8%;
     position: absolute;
-    top: 491px;
-    left: 348px;
+	top: 487px;
+    left: 347px;
+}
+
+#purple-sparkles {
+	background-image: url(assets/purple-sparkles.svg);
+    background-repeat: no-repeat;
+    width: 40px;
+    height: 5%;
+    position: absolute;
+	top: 521px;
+    left: 325px;
+}
+
+#purple-circle {
+	background-image: url(assets/purple-circle.svg);
+    background-repeat: no-repeat;
+    width: 142px;
+	height: 29px;
+    position: absolute;
+    left: 226px;
+    bottom: 73px;
 }
 
 #green-underline {
@@ -575,7 +599,7 @@ nav {
     height: 27px;
     position: absolute;
     left: 236px;
-    bottom: 79px;
+    bottom: 85px;
 }
 
 #pink-underline {
@@ -585,7 +609,7 @@ nav {
     height: 37px;
     position: absolute;
     left: 348px;
-    bottom: 58px;
+    bottom: 61px;
 }
 
 #purple-sparkle {
@@ -615,7 +639,7 @@ nav {
     height: 35px;
     position: absolute;
     left: 112px;
-    bottom: 85px;
+    bottom:93px;
 }
 
 #highlight2 {
@@ -624,7 +648,7 @@ nav {
     width: 23px;
     height: 240px;
     position: absolute;
-    left: 387px;
+    left: 371px;
     bottom: 311px;
     transform: rotate(180deg);
 }
@@ -1032,14 +1056,7 @@ p.pn2, p.pn1, p.pn0 {
 
 .projsocial {
 	position: absolute;
-    bottom: 247px;
-    left: 277px;
-    width: 36px;
-}
-
-.projsocial2 {
-	position: absolute;
-    bottom: 250px;
+    bottom: 251px;
     left: 277px;
     width: 36px;
 }
@@ -1076,15 +1093,11 @@ p.pn2, p.pn1, p.pn0 {
 }
 
 .c6 {
-	flex:0 0 638px;
+	flex:0 0 660px;
 }
 
 .c7 {
-	flex:0 0 589px;
-}
-
-.c8 {
-	flex:0 0 589px;
+	flex:0 0 660px;
 }
 
 .animated #static, .static #animated {
@@ -1215,6 +1228,6 @@ p.pn2, p.pn1, p.pn0 {
 
 @media only screen and (max-height: 1000px){
 	p.pn2, p.pn1, p.pn0{
-		font-size: 38px;
+		font-size: 35px;
 	}
 }
